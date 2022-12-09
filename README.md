@@ -1,0 +1,1 @@
+# Grocom-Lite-theme
