@@ -1,0 +1,22 @@
+.tstmnl_wrap {
+  text-align: center;
+}
+.tstmnl_wrap .tstmnl_card {
+  max-width: 570px;
+  margin: 0 auto;
+}
+.tstmnl_wrap .tstmnl_cont {
+  margin: 30px 0;
+}
+.tstmnl_wrap .tstmnl_name {
+  margin: 0;
+  font-size: 16px;
+}
+.tstmnl_wrap .tstmnl_cont h6 {
+  font-size: 24px;
+  font-weight: 300;
+}
+.tstmnl_wrap .tstmnl_name strong {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+}

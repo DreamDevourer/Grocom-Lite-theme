@@ -1,0 +1,369 @@
+[ {
+  "id" : "64457f13-2a1f-5504-c032-13f24b71d4e9",
+  "name" : "heading_type",
+  "display_width" : null,
+  "label" : "Heading type",
+  "required" : false,
+  "locked" : true,
+  "display" : "select",
+  "choices" : [ [ "1", "H1" ], [ "2", "H2" ], [ "3", "H3" ], [ "4", "H4" ], [ "5", "H5" ], [ "6", "H6" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "type" : "choice",
+  "default" : "3"
+}, {
+  "id" : "e845b201-8e61-f630-3bc7-849782d7f811",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : true,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Our <b>Best Delivered</b> Categories"
+}, {
+  "id" : "f8f49e3f-d9ba-c958-6993-e880de2914a0",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : true,
+  "type" : "richtext",
+  "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nascetur consectetur a pretium diam. Nisl lorem.</p>"
+}, {
+  "id" : "bf237588-a80f-7131-737d-21c97e97cb80",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : true,
+  "children" : [ {
+    "id" : "7484508e-97fc-fe43-4356-ae7a02b542b0",
+    "name" : "slider_setting",
+    "display_width" : null,
+    "label" : "Slider setting",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "614ef95e-b7cd-de18-b1b8-ded3e6e92f18",
+      "name" : "autoplay",
+      "display_width" : null,
+      "label" : "Autoplay",
+      "required" : false,
+      "locked" : false,
+      "display" : "checkbox",
+      "type" : "boolean",
+      "default" : true
+    }, {
+      "id" : "801c4a72-6441-2f06-aba1-1c8d5ac94ba2",
+      "name" : "autoplay_speed",
+      "display_width" : null,
+      "label" : "Autoplay speed",
+      "required" : false,
+      "locked" : false,
+      "display" : "text",
+      "min" : 1000,
+      "max" : 10000,
+      "step" : 1000,
+      "type" : "number",
+      "default" : 2000
+    } ],
+    "tab" : "STYLE",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "autoplay" : true,
+      "autoplay_speed" : 2000
+    }
+  }, {
+    "id" : "54430476-2349-1ef4-1988-994431e26574",
+    "name" : "desktop_spacing",
+    "display_width" : null,
+    "label" : "Desktop spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "f7aeacaf-d0df-632f-3802-bcc955f130db",
+    "name" : "mobile_spacing",
+    "display_width" : null,
+    "label" : "Mobile spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "slider_setting" : {
+      "autoplay" : true,
+      "autoplay_speed" : 2000
+    },
+    "desktop_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "mobile_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }
+}, {
+  "id" : "43315d24-22cb-6a10-3cb7-a6c1e0398740",
+  "name" : "categories_item",
+  "display_width" : null,
+  "label" : "Categories item",
+  "required" : false,
+  "locked" : true,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "5aa92b33-0212-71c8-249d-113b5c39f3e9",
+    "default" : 3
+  },
+  "children" : [ {
+    "id" : "6342fd1f-8949-a1df-410d-91845bb54a75",
+    "name" : "shape_image",
+    "display_width" : null,
+    "label" : "Shape image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "exact",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Shape1.svg",
+      "alt" : "Shape1",
+      "loading" : "lazy",
+      "width" : 322,
+      "height" : 246
+    }
+  }, {
+    "id" : "639a5d3d-9f9a-2aca-f850-b2e96216f641",
+    "name" : "image_field",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "exact",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Milk.png",
+      "alt" : "Milk",
+      "loading" : "lazy",
+      "width" : 361,
+      "height" : 372
+    }
+  }, {
+    "id" : "5aa92b33-0212-71c8-249d-113b5c39f3e9",
+    "name" : "category",
+    "display_width" : null,
+    "label" : "Category",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Drinks"
+  }, {
+    "id" : "17efaa9d-a962-f487-173f-814cbd3eef27",
+    "name" : "link_text",
+    "display_width" : null,
+    "label" : "Link text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Check out"
+  }, {
+    "id" : "be9b8c57-6bbc-1a78-3a25-2ef6ee5e9c2d",
+    "name" : "link_field",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "shape_image" : {
+      "size_type" : "exact",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Shape1.svg",
+      "alt" : "Shape1",
+      "loading" : "lazy",
+      "width" : 322,
+      "height" : 246
+    },
+    "image_field" : {
+      "size_type" : "exact",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Milk.png",
+      "alt" : "Milk",
+      "loading" : "lazy",
+      "width" : 361,
+      "height" : 372
+    },
+    "category" : "Drinks",
+    "link_text" : "Check out",
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "shape_image" : {
+      "size_type" : "exact",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Shape1.svg",
+      "alt" : "Shape1",
+      "loading" : "lazy",
+      "width" : 322,
+      "height" : 246
+    },
+    "image_field" : {
+      "size_type" : "exact",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Milk.png",
+      "alt" : "Milk",
+      "loading" : "lazy",
+      "width" : 361,
+      "height" : 372
+    },
+    "category" : "Drinks",
+    "link_text" : "Check out",
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "shape_image" : {
+      "size_type" : "exact",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Shape1.svg",
+      "alt" : "Shape1",
+      "loading" : "lazy",
+      "width" : 322,
+      "height" : 246
+    },
+    "image_field" : {
+      "size_type" : "exact",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Milk.png",
+      "alt" : "Milk",
+      "loading" : "lazy",
+      "width" : 361,
+      "height" : 372
+    },
+    "category" : "Drinks",
+    "link_text" : "Check out",
+    "link_field" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ]
+} ]

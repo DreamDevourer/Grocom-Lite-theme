@@ -1,0 +1,535 @@
+{% import './tools/_macros.css' %}
+
+{###########################################################################}
+{############################   1. Variables   #############################}
+{###########################################################################}
+
+/* 1a. Containers */
+
+{% set container_width = theme.spacing.max_width ~ 'px' %}
+{% set dnd_section_padding = theme.spacing.vertical_spacing ~ 'px' %}
+
+/* 1b. Colors */
+
+{% set primary_color = theme.global_colors.primary_color.color  %}
+{% set secondary_color = theme.global_colors.secondary_color.color %}
+{% set tertiary_color = theme.global_colors.tertiary_color.color %}
+{% set tertiary_accent_color = theme.global_colors.tertiary_accent_color.color %}
+
+/* 1c. Typography */
+
+{% set primary_font = theme.global_fonts.primary %}
+{% set secondary_font = theme.global_fonts.secondary %}
+
+{% if theme.typography.primary_font.primary_font_select == "google" %}{% set primary_font_size = theme.typography.primary_font.primary_font.size.value %}{% set primary_font_color = theme.typography.primary_font.primary_font.color %}{% set primary_font_variation = theme.typography.primary_font.primary_font.variation %}{% set primary_font = theme.typography.primary_font.primary_font.font %}{% else %}{% set primary_font_size = theme.typography.primary_font.primary_font_custom_font_size %}{% set primary_font_color = theme.typography.primary_font.primary_font_custom_font_color.color %}{% set primary_font = theme.typography.primary_font.primary_font_custom_font %}{% endif %}
+{% if theme.typography.secondary_font.secondary_font_select == "google" %}{% set secondary_font_size = theme.typography.secondary_font.secondary_font.size.value %}{% set secondary_font_color = theme.typography.secondary_font.secondary_font.color %}{% set secondary_font_variation = theme.typography.secondary_font.secondary_font.variation %}{% set secondary_font = theme.typography.secondary_font.secondary_font.font %}{% else %}{% set secondary_font_size = theme.typography.secondary_font.secondary_font_custom_font_size %}{% set secondary_font_color = theme.typography.secondary_font.secondary_font_custom_font_color.color %}{% set secondary_font = theme.typography.secondary_font.secondary_font_custom_font %}{% endif %}
+
+
+{% if theme.typography.body_text.body_text_select == "google" %}{% set body_size = theme.typography.body_text.body_text.size %}{% set body_color = theme.typography.body_text.body_text.color %}{% set body_variation =  theme.typography.body_text.body_text.variant %}{% set body_font = theme.typography.body_text.body_text.font %}{% else %}{% set body_size = theme.typography.body_text.body_font_custom_size %}{% set body_color = theme.typography.body_text.body_font_custom_color.color %}{% set body_font = theme.typography.body_text.body_font_custom %}{% endif %}
+{% if theme.typography.h1_font.h1_font_select == "google" %}{% set h1_size = theme.typography.h1_font.h1_font.size %}{% set h1_color = theme.typography.h1_font.h1_font.color %}{% set h1_variation = theme.typography.h1_font.h1_font.variant %}{% set h1_font = theme.typography.h1_font.h1_font.font %}{% else %}{% set h1_color = theme.typography.h1_font.h1_custom_font_color.color %}{% set h1_size = theme.typography.h1_font.h1_custom_font_size %}{% set h1_font = theme.typography.h1_font.h1_custom_font_family %}{% endif %}
+{% if theme.typography.h2_font.h2_font_select == "google" %}{% set h2_size = theme.typography.h2_font.h2_font.size %}{% set h2_color = theme.typography.h2_font.h2_font.color %}{% set h2_variation = theme.typography.h2_font.h2_font.variant %}{% set h2_font = theme.typography.h2_font.h2_font.font %}{% else %}{% set h2_color = theme.typography.h2_font.h2_custom_font_color.color %}{% set h2_size = theme.typography.h2_font.h2_custom_font_size %}{% set h2_font = theme.typography.h2_font.h2_custom_font_family %}{% endif %}
+{% if theme.typography.h3_font.h3_font_select == "google" %}{% set h3_size = theme.typography.h3_font.h3_font.size %}{% set h3_color = theme.typography.h3_font.h3_font.color %}{% set h3_variation = theme.typography.h3_font.h3_font.variant %}{% set h3_font = theme.typography.h3_font.h3_font.font %}{% else %}{% set h3_color = theme.typography.h3_font.h3_custom_font_color.color %}{% set h3_size = theme.typography.h3_font.h3_custom_font_size %}{% set h3_font = theme.typography.h3_font.h3_custom_font_family %}{% endif %}
+{% if theme.typography.h4_font.h4_font_select == "google" %}{% set h4_size = theme.typography.h4_font.h4_font.size %}{% set h4_color = theme.typography.h4_font.h4_font.color %}{% set h4_variation = theme.typography.h4_font.h4_font.variant %}{% set h4_font = theme.typography.h4_font.h4_font.font %}{% else %}{% set h4_color = theme.typography.h4_font.h4_custom_font_color.color %}{% set h4_size = theme.typography.h4_font.h4_custom_font_size %}{% set h4_font = theme.typography.h4_font.h4_custom_font_family %}{% endif %}
+{% if theme.typography.h5_font.h5_font_select == "google" %}{% set h5_size = theme.typography.h5_font.h5_font.size %}{% set h5_color = theme.typography.h5_font.h5_font.color %}{% set h5_variation = theme.typography.h5_font.h5_font.variant %}{% set h5_font = theme.typography.h5_font.h5_font.font %}{% else %}{% set h5_color = theme.typography.h5_font.h5_custom_font_color.color %}{% set h5_size = theme.typography.h5_font.h5_custom_font_size %}{% set h5_font = theme.typography.h5_font.h5_custom_font_family %}{% endif %}
+{% if theme.typography.h6_font.h6_font_select == "google" %}{% set h6_size = theme.typography.h6_font.h6_font.size %}{% set h6_color = theme.typography.h6_font.h6_font.color %}{% set h6_variation = theme.typography.h6_font.h6_font.variant %}{% set h6_font = theme.typography.h6_font.h6_font.font %}{% else %}{% set h6_color = theme.typography.h6_font.h6_custom_font_color.color %}{% set h6_size = theme.typography.h6_font.h6_custom_font_size %}{% set h6_font = theme.typography.h6_font.h6_custom_font_family %}{% endif %}
+
+{% set anchor_font_color = theme.typography.link_color.color %}
+{% set anchor_font_hover_color = theme.typography.link_hover_color.color %}
+
+/* 1d. Buttons */
+
+{% set button_bg_color = color(theme.buttons.background_color) %}
+{% set button_font_color = color(theme.buttons.text_color) %}
+{% set button_border = theme.buttons.border_width ~ 'px solid ' ~ color(theme.buttons.border_color) %}
+{% set button_corner_radius = theme.buttons.border_radius ~ 'px' %}
+{% set button_spacing = theme.buttons.vertical_padding ~ 'px' ~ ' ' ~ theme.buttons.horizontal_padding ~ 'px' %}
+
+{% set button_bg_hover_color = color(theme.buttons.background_hover_color) %}
+{% set button_font_hover_color = color(theme.buttons.text_hover_color) %}
+{% set button_border_hover = theme.buttons.border_width ~ 'px solid ' ~ color(theme.buttons.border_hover_color) %}
+
+/* 1e. Forms */
+
+{% set form_title_bg_color = color(theme.forms.header_background_color) %}
+{% set form_title_font_color = theme.forms.header_text_color.color %}
+
+{% set form_label_font_color = theme.forms.label_color.color %}
+{% set form_help_text_font_color = theme.forms.help_text_color.color %}
+
+{% set input_bg_color = theme.forms.field_background_color.color %}
+{% set form_border_radius = theme.forms.field_border_radius ~ 'px' %}
+{% set form_border = theme.forms.field_border_width ~ 'px solid ' ~ color(theme.forms.field_border_color) %}
+{% set form_border_focus = theme.forms.field_border_width ~ 'px solid ' ~ color(theme.forms.field_focus_border_color) %}
+
+/* Background and Border colors for Forms */
+{% set form_bg_color = theme.forms.form_background_color.color %}
+{% set form_bd_color = theme.forms.form_border_color.color %}
+
+/* 1f. Tables */
+
+{% set table_head_bg_color = color(theme.tables.header_background_color) %}
+{% set table_head_font_color = theme.tables.header_text_color.color %}
+
+{% set table_bg_color = color(theme.tables.body_background_color) %}
+{% set table_font_color = theme.tables.body_text_color.color %}
+{% set table_border_color = theme.tables.border_color.color %}
+
+{% set table_footer_bg_color = color(theme.tables.footer_background_color) %}
+{% set table_footer_font_color = theme.tables.footer_text_color.color %}
+
+/* 1g. Site header */
+
+{% set header_bg_color = color(theme.header.background_color) %}
+{% set menu_link_color = color(theme.header.menu_link_color) %}
+{% set menu_link_hover_color = color(theme.header.menu_link_hover_color) %}
+{% set active_menu_link_color = color(theme.header.active_menu_link_color) %}
+{% set child_menu_background_color = color(theme.header.child_menu_background_color) %}
+{% set child_menu_link_color = color(theme.header.child_menu_link_color) %}
+{% set child_menu_link_hover_color = color(theme.header.child_menu_link_hover_color) %}
+{% set active_child_menu_link_color = color(theme.header.active_child_menu_link_color) %}
+
+/* 1h. Site footer */
+
+{% set ft_background_color = color(theme.footer.background_color) %}
+{% set ft_border_color = color(theme.footer.border_color) %}
+{% set ft_title_color = color(theme.footer.title_color) %}
+{% set ft_text_color = color(theme.footer.text_color) %}
+{% set ft_link_color = color(theme.footer.link_color) %}
+{% set ft_link_hover_color = color(theme.footer.link_hover_color) %}
+
+{% set footer_font_color = theme.tables.footer_text_color.color %}
+
+
+{###########################################################################}
+{##################   2. Containers / Grid / DnD Areas   ###################}
+{###########################################################################}
+
+.content-wrapper {
+  max-width: {{ container_width }};
+}
+
+.dnd-section,
+.content-wrapper--vertical-spacing {
+  padding-top: {{ dnd_section_padding }};
+  padding-bottom: {{ dnd_section_padding }};
+}
+
+.dnd-section > .row-fluid {
+  max-width: {{ container_width }};
+}
+
+{###########################################################################}
+{###########################   3. Typography   #############################}
+{###########################################################################}
+
+html {
+  font-size: {{ body_size }}px;
+}
+
+body {
+  font-size: {{ body_size }}px;
+  color: {{ body_color }};
+  font-weight: {{ body_variation }};
+  font-family: {{ body_font }};
+}
+
+/* Paragraphs */
+
+p {}
+
+/* Anchors */
+
+a {
+  color: {{ anchor_font_color }};
+}
+
+a:hover,
+a:focus,
+a:active {
+  color: {{ anchor_font_hover_color }};
+}
+
+/* Headings */
+
+h1 {
+  font-family: {{ h1_font }};
+  font-size: {{ h1_size }}px;
+  color: {{ h1_color }};
+  font-weight: {{ h1_variation }};
+}
+
+h2 {
+  font-family: {{ h2_font }};
+  font-size: {{ h2_size }}px;
+  color: {{ h2_color }};
+  font-weight: {{ h2_variation }};
+}
+
+h3 {
+  font-family: {{ h3_font }};
+  font-size: {{ h3_size }}px;
+  color: {{ h3_color }};
+  font-weight: {{ h3_variation }};
+}
+
+h4 {
+  font-family: {{ h4_font }};
+  font-size: {{ h4_size }}px;
+  color: {{ h4_color }};
+  font-weight: {{ h4_variation }};
+}
+
+h5 {
+  font-family: {{ h5_font }};
+  font-size: {{ h5_size }}px;
+  color: {{ h5_color }};
+  font-weight: {{ h5_variation }};
+}
+
+h6 {
+  font-family: {{ h6_font }};
+  font-size: {{ h6_size }}px;
+  color: {{ h6_color }};
+  font-weight: {{ h6_variation }};
+}
+
+/* Blockquote */
+
+blockquote {
+  border-left-color: {{ secondary_color }};
+}
+
+@media (max-width: 991px) {
+  h1 {
+    font-size: {{ h1_size * 0.888 }}px;
+  }
+  h2 {
+    font-size: {{ h2_size * 0.75 }}px;
+  }
+}
+
+{###########################################################################}
+{############################   4. Buttons   ###############################}
+{###########################################################################}
+
+button,
+.button,
+.hs-button,
+form input[type=submit] {
+  background-color: {{ button_bg_color }};
+  color: {{ button_font_color }};
+  border: {{ button_border }};
+  border-radius: {{ button_corner_radius }};
+  padding: {{ button_spacing }};
+}
+
+button:hover,
+button:focus,
+.button:hover,
+.button:focus,
+.hs-button:hover,
+.hs-button:focus,
+form input[type=submit]:hover,
+form input[type=submit]:focus {
+  background-color: {{ button_bg_hover_color }};
+  color: {{ button_font_hover_color }};
+  border: {{ button_border_hover }};
+}
+
+button:active,
+.button:active {}
+
+{###########################################################################}
+{##############################   5. Forms   ###############################}
+{###########################################################################}
+
+form,
+.submitted-message {
+  font-size: {{ body_size }}px;
+  color: {{ body_color }};
+  font-weight: {{ body_variation }}
+}
+
+form, .hs-form {
+				background-color: {{ form_bg_color }};
+				border: 1px solid {{ form_bd_color }};
+}
+
+/* Form title */
+
+.form-title {
+  background-color: {{ form_title_bg_color }};
+  color: {{ form_title_font_color }};
+}
+
+/* Form label */
+
+form label {
+  color: {{ form_label_font_color }};
+}
+
+/* Form help text */
+
+form legend {
+  color: {{ form_help_text_font_color }};
+}
+
+/* Form inputs */
+
+form input[type=text],
+form input[type=email],
+form input[type=password],
+form input[type=tel],
+form input[type=number],
+form input[type=file],
+form select,
+form textarea {
+  background-color: {{ input_bg_color }};
+  color: {{ body_color }};
+  border-radius: {{ form_border_radius }};
+  border: {{ form_border }};
+}
+
+form input[type=text]:focus,
+form input[type=email]:focus,
+form input[type=password]:focus,
+form input[type=tel]:focus,
+form input[type=number]:focus,
+form input[type=file]:focus,
+form select:focus,
+form textarea:focus {
+  border: {{ form_border_focus }};
+}
+
+/* Form placeholder text */
+
+::-webkit-input-placeholder {
+  color: {{ body_color }};
+  opacity: 0.75;
+}
+
+::-webkit-input-placeholder,
+::-moz-placeholder,
+:-ms-input-placeholder,
+:-moz-placeholder,
+::placeholder,
+.hs-fieldtype-date .input .hs-dateinput:before {
+  color: {{ body_color }};
+  opacity: 0.75;
+}
+
+/* Date picker */
+
+.fn-date-picker td.is-selected .pika-button {
+  background: {{ primary_color }};
+}
+
+.fn-date-picker td .pika-button:hover {
+  background-color: {{ primary_color }} !important;
+}
+
+.fn-date-picker td.is-today .pika-button {
+  color: {{ primary_color }};
+}
+
+/* Submit button */
+
+form input[type=submit],
+.hs-button {
+  background-color: {{ button_bg_color }};
+  color: {{ button_font_color }};
+  border: {{ button_border }};
+  border-radius: {{ button_corner_radius }};
+  padding: {{ button_spacing }};
+}
+
+form input[type=submit]:hover,
+form input[type=submit]:focus,
+.hs-button:hover,
+.hs-button:focus {
+  background-color: {{ button_bg_hover_color }};
+  color: {{ button_font_hover_color }};
+  border: {{ button_border_hover }};
+}
+
+form input[type=submit]:active,
+form .hs-button:active {}
+
+{###########################################################################}
+{#############################   6. Tables   ###############################}
+{###########################################################################}
+
+table {
+  background-color: {{ table_bg_color }};
+  border-color: {{ table_border_color }};
+}
+
+th,
+td {
+  border-color: {{ table_border_color }};
+  color: {{ table_font_color }};
+}
+
+thead th,
+thead td {
+  background-color: {{ table_head_bg_color }};
+  border-bottom-color: {{ table_border_color }};
+  color: {{ table_head_font_color }};
+}
+
+tfoot td {
+  background-color: {{ table_footer_bg_color }};
+  color: {{ table_footer_font_color }};
+}
+
+{###########################################################################}
+{###########################   7. Site header   ############################}
+{###########################################################################}
+
+.header_main,
+.cm_menu {
+  background-color: {{ header_bg_color }};
+  font-family: {{ secondary_font }};
+}
+
+.cm_menu .hs-menu-wrapper > ul > li > a  {
+  color: {{ menu_link_color }};
+}
+
+.cm_menu .hs-menu-wrapper > ul > li:hover > a,
+.cm_menu .hs-menu-wrapper > ul > li.active:hover > a {
+  color: {{ menu_link_hover_color }};
+}
+
+.cm_menu .hs-menu-wrapper > ul > li.active > a  {
+  color: {{ active_menu_link_color }};
+}
+
+.cm_menu .hs-menu-wrapper > ul ul {
+  background-color: {{ child_menu_background_color }};
+}
+
+.cm_menu .hs-menu-wrapper > ul ul li a {
+  color: {{ child_menu_link_color }};
+}
+
+.cm_menu .hs-menu-wrapper > ul ul li:hover > a,
+.cm_menu .hs-menu-wrapper > ul ul li.active:hover > a {
+  color: {{ child_menu_link_hover_color }};
+}
+
+.cm_menu .hs-menu-wrapper > ul ul li.active > a {
+  color: {{ active_child_menu_link_color }};
+}
+
+{###########################################################################}
+{###########################   8. Site footer   ############################}
+{###########################################################################}
+
+.footer_main {
+  background-color: {{ ft_background_color }};
+  color: {{ ft_text_color }};
+}
+
+.footer_main .footer_inner {
+  border-top-color: {{ ft_border_color }} !important;
+}
+
+.footer_main .ft_title {
+  color: {{ ft_title_color }};
+}
+
+.footer_main .ft_menu .hs-menu-wrapper > ul > li > a,
+.ft_social .ft_social_item a {
+  color: {{ ft_link_color }};
+}
+
+.footer_main .ft_menu .hs-menu-wrapper > ul > li > a:hover,
+.ft_social .ft_social_item a:hover {
+  color: {{ ft_link_hover_color }};
+}
+
+.ft_social .ft_social_item .icon svg {
+  fill: {{ ft_link_color }};
+}
+
+.ft_social .ft_social_item a:hover .icon svg {
+  fill: {{ ft_link_hover_color }};
+}
+
+/* Footer Content */
+
+.footer * {
+  color: {{ ft_title_color }};
+}
+
+{###########################################################################}
+{##############################   9. Blog   ################################}
+{###########################################################################}
+
+
+
+{###########################################################################}
+{##########################   10. System pages   ###########################}
+{###########################################################################}
+
+
+
+{###########################################################################}
+{############################   11. Modules   ##############################}
+{###########################################################################}
+
+.card__price {
+  font-family: {{ h3_font }};
+  font-size: {{ h3_size }}px;
+  color: {{ h3_color }};
+  font-weight: {{ h3_variation }}
+}
+
+.cm_menu .hs-menu-wrapper > ul li a,
+.blog_listing_grp .post_item_title {
+  font-family: {{ theme.global_fonts.secondary_font.secondary_font.font }};
+}
+
+.p_color {
+  color: {{ primary_color }};
+}
+.p_bg_color {
+  background-color: {{ primary_color }};
+}
+
+.s_color {
+  color: {{ secondary_color }};
+}
+.s_bg_color {
+  background-color: {{ secondary_color }};
+}
+
+.t_color {
+  color: {{ tertiary_color }};
+}
+.t_color:hover {
+  color: {{ tertiary_accent_color }};
+}
+
+h1 b,
+h2 b,
+h3 b,
+h4 b,
+h5 b,
+h6 b {
+  color: {{ secondary_color }};
+}
+
+.cm_faq .cm_faq_right .accordion-list li.active .cm_title:after {
+  color: {{ secondary_color }};
+}
+
+.cm_category_slider .slick-dots li button:hover,
+.cm_category_slider .slick-dots li.slick-active button {
+  background-color: {{ secondary_color }};
+}
+
+.cm_quality_prod_item svg path {
+  fill: {{ secondary_color }};
+}

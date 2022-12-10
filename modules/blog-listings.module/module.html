@@ -1,0 +1,56 @@
+<div class="blog_listing_grp">
+  <div class="content-wrapper">
+    {% if module.heading %}
+    <div class="cm_blog_title">
+      <h{{ module.heading_type }} class="cm_blog_heading">{{ module.heading }}</h{{ module.heading_type }}>
+    </div>
+    {% endif %}
+    <div class="post_items">
+      {% for content in contents %}
+      {# Set featured image #}
+		{# This checks to see if a user is opted into the blog listing editing experience. If they are it uses the conditional from the module. If they are not it uses the conditional from blog settings #}
+			{% set show_featured_image = false %}
+			{% if content.featured_image %}
+				{% if blog.listing_page_id %}
+					{% if module.featured_image %}
+					  {% set show_featured_image = true %}
+					{% endif %}
+		    {% else %}
+					{% if group.use_featured_image_in_summary %}
+					  {% set show_featured_image = true %}
+					{% endif %}
+				{% endif %}
+			{% endif %}
+		{# End set featured image #}
+      <div class="post_item">
+        <div class="post_item_innr">
+          <a href="{{ content.absolute_url }}" class="post_item_link"></a>
+          {% if module.featured_image %}
+          <div class="post_item_img">
+            {% if show_featured_image == true %}
+            <img src="{{ content.featured_image }}" alt="{{ content.name }}">
+            {% endif %}
+          </div>
+          {% endif %}
+          <div class="post_item_cont">
+            {% if module.post_title %}
+            <h6 class="post_item_title">{{ content.name }}</h6>
+            {% endif %}
+            {% if module.post_date %}
+            <p class="post_item_date">{{ content.publish_date_local_time.strftime('%B %e, %Y') }}</p>
+            {% endif %}
+            {% if module.description %}
+            <p>{{ content.post_list_content|safe|striptags|truncatehtml(220, '[...]' , false) }}</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    
+    
+  </div>
+</div>
+
+

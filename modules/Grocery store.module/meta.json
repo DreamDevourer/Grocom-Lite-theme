@@ -1,0 +1,8 @@
+{
+  "global" : false,
+  "icon" : "fontawesome-5.14.0:Box%20Open:SOLID",
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 91148023040,
+  "label" : "Grocery store",
+  "is_available_for_new_content" : true
+}

@@ -1,0 +1,19 @@
+{
+  "global" : true,
+  "smart_type" : "NOT_SMART",
+  "icon" : "fontawesome-5.14.0:Delicious",
+  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
+  "module_id" : 91286897526,
+  "css_assets" : [ {
+    "autoload" : true,
+    "path" : "../../css/slick.css",
+    "name" : "slick.css"
+  } ],
+  "js_assets" : [ {
+    "autoload" : true,
+    "path" : "../../js/slick.js",
+    "name" : "slick.js"
+  } ],
+  "label" : "Best Delivered Categories",
+  "is_available_for_new_content" : true
+}

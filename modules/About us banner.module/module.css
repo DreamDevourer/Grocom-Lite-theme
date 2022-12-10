@@ -1,0 +1,99 @@
+.cm_about_banner {
+  overflow: hidden;
+}
+
+.cm_about_banner .row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 -20px;
+}
+
+.cm_about_banner .cm_about_banner_left, .cm_about_banner .cm_about_banner_right {
+  padding: 0 20px;
+}
+
+.cm_about_banner .cm_about_banner_left {
+  width: 60%;
+}
+
+.cm_about_banner .cm_about_banner_right {
+  width: 40%;
+  position: relative;
+}
+
+.cm_about_banner .cm_about_banner_right .cm_image_wrap {
+  border-radius: 42px;
+  padding: 30px 30px 140px;
+  text-align: center;
+}
+
+.cm_about_banner .cm_about_banner_right .cm_image_wrap img {
+  display: block;
+  margin: 0 auto;
+}
+
+.cm_about_banner .cm_title {
+  margin-bottom: 40px;
+  padding-top: 40px;
+}
+
+.cm_about_banner .cm_content {
+  margin-bottom: 30px;
+  max-width: 440px;
+}
+
+.cm_about_banner .cm_pop_vid_btn {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+
+.cm_about_banner .cm_pop_vid_btn svg {
+  margin-right: 15px;
+}
+
+.cm_about_banner .cm_floating_image {
+  position: absolute;
+  bottom: -30%;
+  width: 200%;
+  left: -70%;
+}
+
+
+@media (max-width: 767px) {
+  .cm_about_banner .cm_about_banner_right {
+    width: 100%;
+    order: 1;
+    padding-bottom: 40px;
+  }
+
+  .cm_about_banner .cm_about_banner_left {
+    width: 100%;
+    order: 2;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .cm_about_banner .cm_title {
+    padding-top: 0;
+  }
+
+  .cm_about_banner .cm_content {
+    max-width: none;
+  }
+
+  .cm_about_banner .cm_pop_vid_btn {
+    justify-content: center;
+  }
+
+  .cm_about_banner .cm_floating_image {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,81 @@
+<div class="cm_quality_prod_global">
+  <div class="cm_container_wrap">
+    <div class="content-wrapper">
+      <div class="cm_quality_prod">
+        {% if module.heading %}
+        <div class="cm_title">
+          <h{{ module.heading_type }}>{{ module.heading }}</h{{ module.heading_type }}>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+  <div class="content-wrapper">
+    <div class="cm_quality_prod_wrap">
+      {% for item in module.quality_products_item %}
+      <div class="cm_quality_prod_item">
+        <div class="cm_icon">
+          {% if item.icon.icon_type == 'fontawesome' %}
+          <div class="cm_icon_wrap">
+            {% icon
+              name="{{ item.icon.icon_field.name }}"
+              style="{{ item.icon.icon_field.type }}"
+              unicode="{{ item.icon.icon_field.unicode }}"
+              icon_set="{{ item.icon.icon_field.icon_set }}"
+            %}
+          </div>
+          {% endif %}
+          {% if item.icon.icon_type == 'vector' %}
+          <div class="cm_icon_wrap">
+            {% if item.icon.vector_icon.src %}
+            {% set sizeAttrs = 'width="{{ item.icon.vector_icon.width }}" height="{{ item.icon.vector_icon.height }}"' %}
+            {% if item.icon.vector_icon.size_type == 'auto' %}
+            {% set sizeAttrs = 'width="{{ item.icon.vector_icon.width }}" height="{{ item.icon.vector_icon.height }}" style="max-width: 100%; height: auto;"' %}
+            {% elif item.icon.vector_icon.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ item.icon.vector_icon.max_width }}" height="{{ item.icon.vector_icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = item.icon.vector_icon.loading != 'disabled' ? 'loading="{{ item.icon.vector_icon.loading }}"' : '' %}
+            <img src="{{ item.icon.vector_icon.src }}" alt="{{ item.icon.vector_icon.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+          </div>
+          {% endif %}
+        </div>
+        <div class="cm_content">
+          {{ item.content }}
+        </div>
+        <ul class="cm_list">
+          {% for item2 in item.product_process %}
+          <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="11" viewBox="0 0 16 11" fill="none">
+            <path d="M10.2931 1.71465L12.5939 4.00539L1.00014 4.00539C0.734833 4.00539 0.480396 4.11078 0.292799 4.29837C0.105202 4.48597 -0.000189035 4.74041 -0.000189046 5.00571C-0.000189058 5.27101 0.105201 5.52545 0.292799 5.71305C0.480396 5.90064 0.734833 6.00603 1.00014 6.00603L12.5939 6.00603L10.2931 8.29678C10.1994 8.38977 10.125 8.5004 10.0742 8.6223C10.0234 8.7442 9.99725 8.87495 9.99725 9.007C9.99725 9.13906 10.0234 9.26981 10.0742 9.39171C10.125 9.5136 10.1994 9.62424 10.2931 9.71723C10.3861 9.81099 10.4968 9.88541 10.6187 9.9362C10.7406 9.98698 10.8713 10.0131 11.0034 10.0131C11.1354 10.0131 11.2662 9.98698 11.3881 9.9362C11.51 9.88541 11.6206 9.81099 11.7136 9.71723L15.7149 5.71594C15.806 5.62081 15.8774 5.50863 15.925 5.38583C16.025 5.14229 16.025 4.86913 15.925 4.62559C15.8774 4.5028 15.806 4.39062 15.7149 4.29548L11.7136 0.294187C11.6203 0.200918 11.5096 0.126933 11.3877 0.0764568C11.2659 0.0259801 11.1353 -2.11661e-07 11.0034 -2.1841e-07C10.8715 -2.25158e-07 10.7409 0.0259801 10.619 0.0764567C10.4971 0.126933 10.3864 0.200918 10.2931 0.294187C10.1999 0.387455 10.1259 0.498181 10.0754 0.620043C10.0249 0.741904 9.99895 0.872514 9.99895 1.00442C9.99895 1.13632 10.0249 1.26693 10.0754 1.38879C10.1259 1.51065 10.1999 1.62138 10.2931 1.71465Z" fill="#4AB148"/>
+            </svg>{{ item2 }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% require_css %}
+<style>
+  .cm_quality_prod_global {
+    {{ module.style.desktop_spacing.css }}
+  }
+  .cm_quality_prod_global .cm_quality_prod {
+    background-color: rgba({{ module.style.background_color.color|convert_rgb  }},{{ module.style.background_color.opacity/100 }});
+    background-image: url({{ module.style.background_image.src }});
+  }
+  .cm_quality_prod_global .cm_title > * {
+    color: rgba({{ module.style.heading_color.color|convert_rgb  }},{{ module.style.heading_color.opacity/100 }});
+  }
+  .cm_quality_prod_global .cm_quality_prod_wrap .cm_quality_prod_item {
+    background: rgba({{ module.style.item_background_color.color|convert_rgb  }},{{ module.style.item_background_color.opacity/100 }});
+  }
+
+  @media (max-width: 767px) {
+    .cm_quality_prod_global {
+      {{ module.style.mobile_spacing.css }}
+    }
+  }
+</style>
+{% end_require_css %}

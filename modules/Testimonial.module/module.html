@@ -1,0 +1,23 @@
+<div class="tstmnl_wrap {{ name }}">
+  <div class="content-wrapper">
+    <div class="tstmnl_card">
+      <div class="tstmnl_icon"><img src="{{ get_asset_url('../../images/testimonial-icon.png') }}" alt="Testimonial"></div>
+      <div class="tstmnl_cont">{{ module.content }}</div>
+      <p class="tstmnl_name"><strong>{{ module.title }}</strong>{% if module.title && module.designation %}, {% endif %}{{ module.designation }}</p>
+    </div>
+  </div>
+</div>
+
+{% require_css %}
+<style>
+  .{{ name }} {
+    {{ module.style.desktop_spacing.css }}
+  }
+
+  @media (max-width: 767px) {
+    .{{ name }} {
+      {{ module.style.mobile_spacing.css }}
+    }
+  }
+</style>
+{% end_require_css %}

@@ -1,0 +1,195 @@
+[ {
+  "id" : "24da213d-b02f-4641-a4ce-300c5df39996",
+  "name" : "heading_type",
+  "display_width" : null,
+  "label" : "Heading type",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "1", "H1" ], [ "2", "H2" ], [ "3", "H3" ], [ "4", "H4" ], [ "5", "H5" ], [ "6", "H6" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "type" : "choice",
+  "default" : "3"
+}, {
+  "id" : "e764a86d-4de8-54a6-c4f4-362cf2c24f8b",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Frequently asked <b>questions</b>"
+}, {
+  "id" : "489c73aa-91f3-0b22-cebd-088153843ffd",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Haven’t found what you’re looking for? Try our <a href=\"#\">Help Center</a> — we’re here to help.</p>"
+}, {
+  "id" : "25618f12-f572-b3e0-3340-40616b3e0f0d",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "fc799304-dc3d-8d53-e029-21d6be7305cd",
+    "name" : "desktop_spacing",
+    "display_width" : null,
+    "label" : "Desktop spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "9904de28-78ee-bddd-8888-df4128fe7a52",
+    "name" : "mobile_spacing",
+    "display_width" : null,
+    "label" : "Mobile spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "desktop_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "mobile_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }
+}, {
+  "id" : "0b6d2f51-72d0-fd76-98bb-160f9fd18c50",
+  "name" : "faq_items",
+  "display_width" : null,
+  "label" : "FAQ items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "fbd0ee8b-44ed-9c97-a07a-dc07a9a92bbf",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Will I be charged in my local currency?"
+  }, {
+    "id" : "7c069881-997b-a839-897a-f68fbc76e758",
+    "name" : "content",
+    "display_width" : null,
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext",
+    "default" : "<p>If you’re based in the US, CA, UK or EU, yes. For all other regions, you will be charged in either EUR or USD.</p>"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "title" : "Will I be charged in my local currency?",
+    "content" : "<p>If you’re based in the US, CA, UK or EU, yes. For all other regions, you will be charged in either EUR or USD.</p>"
+  }, {
+    "title" : "Will I be charged in my local currency?",
+    "content" : "<p>If you’re based in the US, CA, UK or EU, yes. For all other regions, you will be charged in either EUR or USD.</p>"
+  }, {
+    "title" : "Will I be charged in my local currency?",
+    "content" : "<p>If you’re based in the US, CA, UK or EU, yes. For all other regions, you will be charged in either EUR or USD.</p>"
+  }, {
+    "title" : "Will I be charged in my local currency?",
+    "content" : "<p>If you’re based in the US, CA, UK or EU, yes. For all other regions, you will be charged in either EUR or USD.</p>"
+  } ]
+} ]

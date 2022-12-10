@@ -1,0 +1,48 @@
+<div class="cm_faq">
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="cm_faq_left">
+        {% if module.heading %}
+        <div class="cm_title">
+          <h{{ module.heading_type }}>{{ module.heading }}</h{{ module.heading_type }}>
+        </div>
+        {% endif %}
+        {% if module.content %}
+        <div class="cm_content">
+          {{ module.content }}
+        </div>
+        {% endif %}
+      </div>
+      <div class="cm_faq_right">
+        <ul class="accordion-list">
+          {% for item in module.faq_items %}
+          <li>
+            <div class="faq_item">
+              <div class="cm_title">{{ item.title }}</div>
+              <div class="cm_content_wrap">
+                <div class="cm_content">
+                  {{ item.content }}
+                </div>
+              </div>
+            </div>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% require_css %}
+<style>
+  .cm_faq {
+    {{ module.style.desktop_spacing.css }}
+  }
+
+  @media (max-width: 767px) {
+    .cm_faq {
+      {{ module.style.mobile_spacing.css }}
+    }
+  }
+</style>
+{% end_require_css %}

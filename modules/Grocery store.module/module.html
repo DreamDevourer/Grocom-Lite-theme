@@ -1,0 +1,129 @@
+<div class="cst-gro-stre-grp">
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="cst-grpcry-item-grp col-md-45 visible-phone">
+        {% if module.background_image.src %}<div class="bg-wrapper" style="background-image:url('{{ module.background_image.src }}');"></div>{% endif %}
+        <div class="cst-store-item-grp">
+          {% for item in module.add_grocery_item %}
+          <div class="cst-store-item">
+            <div class="inner">
+              {% set href = item.link.url.href %}
+              {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+              {% endif %}
+              <a href="{{ href }}" {% if item.link.open_in_new_tab %}target="_blank"{% endif %} {% if item.link.rel %}rel="{{ item.link.rel }}"{% endif %}>
+                <div class="cst-img-grp">
+                  {% if item.image.src %}
+                  {% set sizeAttrs = 'width="{{ item.image.width }}" height="{{ item.image.height }}"' %}
+                  {% if item.image.size_type == 'auto' %}
+                  {% set sizeAttrs = 'width="{{ item.image.width }}" height="{{ item.image.height }}" style="max-width: 100%; height: auto;"' %}
+                  {% elif item.image.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ item.image.max_width }}" height="{{ item.image.max_height }}" style="max-width: 100%; height: auto;"' %}
+                  {% endif %}
+                  {% set loadingAttr = item.image.loading != 'disabled' ? 'loading="{{ item.image.loading }}"' : '' %}
+                  <img src="{{ item.image.src }}" alt="{{ item.image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                  {% endif %}
+                </div>
+                <div class="cst-content">
+                  <h3>{{ item.title }}</h3>
+                  <div class="price">
+                    <span class="currency">$</span>{{ item.price }}
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          {% endfor %}
+        </div>      
+      </div>
+      <div class="cst-left-grp col-md-45">
+        {% if module.title %}<h{{ module.title_header_type }}>
+        {{ module.title }}
+        </h{{ module.title_header_type }}>{% endif %}
+        {% if module.content %}<div class="cst-con-grp">
+        {{ module.content }}
+        </div>{% endif %}
+        {% if module.apply_button == "true" %}
+        <div class="cst-btn-grp">
+          {% if module.button_settings.button_type == "std" %}
+          {% set href = module.button_settings.button_link.url.href %}
+          {% if module.button_settings.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          <a class="hs-button" href="{{ href }}" {% if module.button_settings.button_link.open_in_new_tab %}target="_blank"{% endif %} {% if module.button_settings.button_link.rel %}rel="{{ module.button_settings.button_link.rel }}"{% endif %}>{{ module.button_settings.button_text }}</a>
+          {% endif %}
+          {% if module.button_settings.button_type == "cta" %}
+          {% cta guid="{{ module.button_settings.select_cta }}" %}
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+      <div class="cst-cen-ic col-md-1 hidden-phone">
+        <svg xmlns="http://www.w3.org/2000/svg" width="110" height="110" viewBox="0 0 110 110" fill="none" style="max-width: 100%;height: auto;">
+          <g clip-path="url(#clip0_13_2293)">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M52.2709 47.2037C49.6209 46.2494 47.3298 45.9182 45.5515 45.7761C28.5401 44.4841 20.1021 58.4742 16.721 73.0101C15.8129 76.9043 15.7377 83.1811 17.7328 87.7945C19.1334 91.0369 21.5309 93.472 25.2719 93.8917C29.3485 94.3645 33.444 92.1397 37.054 88.7277C42.2791 83.7971 46.5073 76.4058 48.2602 71.816C50.2806 66.5213 52.5154 58.0188 53.6094 49.4532C56.3867 50.7076 59.4956 52.6749 62.7722 55.819C64.2335 57.2113 65.529 59.1703 66.6114 61.4207C63.3418 63.3613 60.31 66.035 57.6974 69.4309C55.5052 72.2886 52.0292 79.1511 51.1932 85.0926C50.5997 89.3343 51.3726 93.098 54.5209 94.931C58.4339 97.2016 61.8881 96.1145 64.675 93.4995C68.6009 89.8194 71.1373 82.9988 71.6253 79.0273C72.1905 74.4063 71.0034 67.6779 68.643 62.1192C80.0359 56.1434 94.0409 59.155 102.36 71.0525C102.611 71.4037 103.107 71.4911 103.468 71.2496C103.827 70.9934 103.914 70.4899 103.663 70.1387C94.8589 57.5523 80.0401 54.3406 67.9771 60.6498C66.8194 58.2575 65.4333 56.1573 63.8731 54.6684C60.2616 51.2074 56.8385 49.0978 53.8066 47.8001C53.9842 46.192 54.1178 44.5865 54.1985 42.999C54.5645 35.8693 53.8373 29.2452 51.2961 25.0163C45.4252 15.243 34.8284 13.0668 24.7641 15.5921C14.7969 18.0969 5.3898 25.2135 1.74842 33.9178C1.57896 34.3236 1.77091 34.7957 2.176 34.9618C2.58124 35.1279 3.04804 34.9387 3.21736 34.5328C6.68226 26.2495 15.6663 19.5101 25.151 17.1369C34.5388 14.7842 44.4553 16.7229 49.931 25.8312C52.344 29.8626 52.9556 36.142 52.6086 42.9187C52.5364 44.3299 52.4212 45.7585 52.2709 47.2037ZM67.2759 62.8902C64.2296 64.7295 61.4008 67.2297 58.9605 70.4101C56.8732 73.1296 53.5652 79.6449 52.7701 85.3202C52.277 88.8377 52.7064 92.036 55.3203 93.5494C58.5091 95.4092 61.3159 94.4636 63.5866 92.3339C67.2481 88.9188 69.59 82.535 70.0447 78.8293C70.5783 74.4886 69.4819 68.1359 67.2759 62.8902ZM52.0843 48.8269C49.4527 47.8422 47.1814 47.5099 45.431 47.366C29.3017 46.1382 21.4776 59.5931 18.2716 73.371C17.4243 76.9978 17.3327 82.8506 19.1943 87.1644C20.3643 89.8637 22.3263 91.9586 25.4534 92.3127C29.1062 92.7377 32.7259 90.6295 35.9609 87.5772C41.0036 82.8187 45.0808 75.671 46.7729 71.246C48.7936 65.9513 51.0314 57.4048 52.0843 48.8269Z" fill="black"></path>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M102.531 70.044C101.757 69.7975 99.5272 69.0964 99.1872 68.9996C98.2334 68.7346 97.7176 68.7362 97.1937 68.7971C96.7735 68.8517 96.3451 68.9654 95.5481 68.9694C95.1083 68.9665 94.757 69.3394 94.7615 69.7788C94.7659 70.2181 95.1266 70.5628 95.5665 70.5657C96.2881 70.5516 96.7425 70.4802 97.14 70.4123C97.5988 70.3408 97.9571 70.3046 98.7608 70.5346C99.1528 70.643 101.268 71.4829 102.305 71.6697C102.846 71.769 103.242 71.672 103.411 71.5592C103.653 71.3981 103.874 71.1209 104.011 70.7023C104.186 70.1643 104.253 69.281 104.35 68.2932C104.439 67.3646 104.561 66.3169 104.895 65.3882C105.181 64.6089 105.62 63.923 106.398 63.5538C106.796 63.3686 106.97 62.9038 106.785 62.5046C106.6 62.1055 106.124 61.9289 105.727 62.1141C104.549 62.6539 103.831 63.6642 103.4 64.8478C103.019 65.8966 102.866 67.0782 102.766 68.1394C102.703 68.7734 102.66 69.3622 102.584 69.8211C102.572 69.895 102.552 69.9695 102.531 70.044Z" fill="black"></path>
+          </g>
+          <defs>
+            <clipPath id="clip0_13_2293">
+              <rect width="103.485" height="103.485" fill="white" transform="translate(6.21484 109.513) rotate(-93.443)"></rect>
+            </clipPath>
+          </defs>
+        </svg>
+      </div>
+      <div class="cst-grpcry-item-grp col-md-45 hidden-phone">
+        {% if module.background_image.src %}<div class="bg-wrapper" style="background-image:url('{{ module.background_image.src }}');"></div>{% endif %}
+        <div class="cst-store-item-grp">
+          {% for item in module.add_grocery_item %}
+          <div class="cst-store-item">
+            <div class="inner">
+              {% set href = item.link.url.href %}
+              {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+              {% endif %}
+              <a href="{{ href }}" {% if item.link.open_in_new_tab %}target="_blank"{% endif %} {% if item.link.rel %}rel="{{ item.link.rel }}"{% endif %}>
+                <div class="cst-img-grp">
+                  {% if item.image.src %}
+                  {% set sizeAttrs = 'width="{{ item.image.width }}" height="{{ item.image.height }}"' %}
+                  {% if item.image.size_type == 'auto' %}
+                  {% set sizeAttrs = 'width="{{ item.image.width }}" height="{{ item.image.height }}" style="max-width: 100%; height: auto;"' %}
+                  {% elif item.image.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ item.image.max_width }}" height="{{ item.image.max_height }}" style="max-width: 100%; height: auto;"' %}
+                  {% endif %}
+                  {% set loadingAttr = item.image.loading != 'disabled' ? 'loading="{{ item.image.loading }}"' : '' %}
+                  <img src="{{ item.image.src }}" alt="{{ item.image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                  {% endif %}
+                </div>
+                <div class="cst-content">
+                  <h3>{{ item.title }}</h3>
+                  <div class="price">
+                    <span class="currency">$</span>{{ item.price }}
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          {% endfor %}
+        </div>      
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% require_css %}
+<style>
+  .cst-gro-stre-grp {
+    {{ module.style.desktop_spacing.css }}
+  }
+  .cst-gro-stre-grp .cst-grpcry-item-grp .cst-store-item-grp .cst-store-item > div {
+    background: rgba({{ module.style.item_background_color.color|convert_rgb  }},{{ module.style.item_background_color.opacity/100 }});
+  }
+
+  @media (max-width: 767px) {
+    .cst-gro-stre-grp {
+      {{ module.style.mobile_spacing.css }}
+    }
+  }
+</style>
+{% end_require_css %}

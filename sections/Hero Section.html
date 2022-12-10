@@ -1,0 +1,133 @@
+<!--
+  templateType: section
+  label: Hero Section
+  isAvailableForNewContent: true
+  description: ""
+  screenshotPath: ../images/thumbnails/Hero Section.png
+-->
+{% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "0px",
+      "left" : "0px",
+      "right" : "0px",
+      "top" : "0px"
+    }
+  },
+  full_width=true
+%}
+  {% dnd_column
+    offset=0,
+    width=12,
+    padding={
+      "default" : {
+        "bottom" : "0px",
+        "left" : "0px",
+        "right" : "0px",
+        "top" : "0px"
+      }
+    }
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/Grocery store",
+        offset=0,
+        width=12,
+        add_grocery_item=[ {
+          "image" : {
+            "alt" : "Tomatoes",
+            "height" : 250,
+            "src" : get_asset_url('../images/Tomatoes.png'),
+            "width" : 328
+          },
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          },
+          "price" : 9,
+          "title" : "Tomatoes"
+        }, {
+          "image" : {
+            "alt" : "Carrots",
+            "height" : 276,
+            "loading" : "lazy",
+            "size_type" : "exact",
+            "src" : get_asset_url('../images/Carrots.png'),
+            "width" : 328
+          },
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          },
+          "price" : 7.99,
+          "title" : "Carrots"
+        }, {
+          "image" : {
+            "alt" : "Cabbage",
+            "height" : 228,
+            "loading" : "lazy",
+            "size_type" : "exact",
+            "src" : get_asset_url('../images/Cabbage.png'),
+            "width" : 292
+          },
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          },
+          "price" : 6.79,
+          "title" : "Cabbage"
+        }, {
+          "image" : {
+            "alt" : "Fresh Orange",
+            "height" : 216,
+            "loading" : "lazy",
+            "size_type" : "exact",
+            "src" : get_asset_url('../images/Fresh-Orange.png'),
+            "width" : 240
+          },
+          "link" : {
+            "no_follow" : false,
+            "open_in_new_tab" : false,
+            "url" : {
+              "href" : "",
+              "type" : "EXTERNAL"
+            }
+          },
+          "price" : 4.5,
+          "title" : "Fresh Orange"
+        } ],
+        apply_button=true,
+        background_image={
+          "alt" : "Background",
+          "height" : 699,
+          "max_height" : 699,
+          "max_width" : 403,
+          "src" : get_asset_url('../images/home_banner_bg.png'),
+          "width" : 403
+        },
+        button_settings={
+          "button_text" : "Order Now",
+          "button_type" : "std"
+        },
+        title="The Fastest <br>Grocery Store <br>in <b>Your City</b>!",
+        title_header_type="1"
+      %}
+        {% module_attribute "content" %}
+          <p>Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit. Aliquam nascetur<br>consectetur a pretium diam. Nisl lorem.</p>
+        {% end_module_attribute %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

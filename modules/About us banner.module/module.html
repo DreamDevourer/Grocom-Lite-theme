@@ -1,0 +1,101 @@
+<div class="cm_about_banner">
+  <div class="content-wrapper">
+    <div class="row">
+      <div class="cm_about_banner_left">
+        {% if module.heading %}
+        <div class="cm_title">
+          <h{{ module.heading_type }}>{{ module.heading }}</h{{ module.heading_type }}>
+        </div>
+        {% endif %}
+        {% if module.content %}
+        <div class="cm_content">
+          {{ module.content }}
+        </div>
+        {% endif %}
+        {% if module.media_button_text %}
+        <div class="cm_pop_vid">
+          {% if module.video_type == 'youtube' %}
+          <a href="https://www.youtube.com/embed/{{ module.video_id }}" data-fancybox class="cm_pop_vid_btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" viewBox="0 0 53 53" fill="none"><rect width="53" height="53" rx="26.5"/><path d="M34 24.7679C35.3333 25.5377 35.3333 27.4623 34 28.2321L24.25 33.8612C22.9167 34.631 21.25 33.6688 21.25 32.1292L21.25 20.8708C21.25 19.3312 22.9167 18.369 24.25 19.1388L34 24.7679Z" fill="white"/></svg>
+            {{ module.media_button_text }}
+          </a>
+          {% elif module.video_type == 'vimeo' %}
+          <a href="https://player.vimeo.com/video/{{ module.video_id }}" data-fancybox class="cm_pop_vid_btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" viewBox="0 0 53 53" fill="none"><rect width="53" height="53" rx="26.5"/><path d="M34 24.7679C35.3333 25.5377 35.3333 27.4623 34 28.2321L24.25 33.8612C22.9167 34.631 21.25 33.6688 21.25 32.1292L21.25 20.8708C21.25 19.3312 22.9167 18.369 24.25 19.1388L34 24.7679Z" fill="white"/></svg>
+            {{ module.media_button_text }}
+          </a>
+          {% elif module.video_type == 'mp4' %}
+          <a href="{{ module.select_video }}" data-fancybox class="cm_pop_vid_btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="53" height="53" viewBox="0 0 53 53" fill="none"><rect width="53" height="53" rx="26.5"/><path d="M34 24.7679C35.3333 25.5377 35.3333 27.4623 34 28.2321L24.25 33.8612C22.9167 34.631 21.25 33.6688 21.25 32.1292L21.25 20.8708C21.25 19.3312 22.9167 18.369 24.25 19.1388L34 24.7679Z" fill="white"/></svg>
+            {{ module.media_button_text }}
+          </a>
+          {% endif %}   
+        </div>
+        {% endif %}
+      </div>
+      <div class="cm_about_banner_right">
+        {% if module.image_field.src %}
+        <div class="cm_image_wrap">
+          {% set sizeAttrs = 'width="{{ module.image_field.width }}" height="{{ module.image_field.height }}"' %}
+          {% if module.image_field.size_type == 'auto' %}
+          {% set sizeAttrs = 'width="{{ module.image_field.width }}" height="{{ module.image_field.height }}" style="max-width: 100%; height: auto;"' %}
+          {% elif module.image_field.size_type == 'auto_custom_max' %}
+          {% set sizeAttrs = 'width="{{ module.image_field.max_width }}" height="{{ module.image_field.max_height }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+          {% set loadingAttr = module.image_field.loading != 'disabled' ? 'loading="{{ module.image_field.loading }}"' : '' %}
+          <img src="{{ module.image_field.src }}" alt="{{ module.image_field.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+        </div>
+        {% endif %}
+        {% if module.floating_image.src %}
+        <div class="cm_floating_image">
+          {% set sizeAttrs = 'width="{{ module.floating_image.width }}" height="{{ module.floating_image.height }}"' %}
+          {% if module.floating_image.size_type == 'auto' %}
+          {% set sizeAttrs = 'width="{{ module.floating_image.width }}" height="{{ module.floating_image.height }}" style="max-width: 100%; height: auto;"' %}
+          {% elif module.floating_image.size_type == 'auto_custom_max' %}
+          {% set sizeAttrs = 'width="{{ module.floating_image.max_width }}" height="{{ module.floating_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+          {% set loadingAttr = module.floating_image.loading != 'disabled' ? 'loading="{{ module.floating_image.loading }}"' : '' %}
+          <img src="{{ module.floating_image.src }}" alt="{{ module.floating_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{ require_js(get_asset_url('../../js/jquery.fancybox.min.js')) }}
+{{ require_css(get_asset_url('../../css/fancybox.css')) }}
+{% require_css %}
+<style>
+  .cm_about_banner .cm_about_banner_right .cm_image_wrap {
+    background-color: rgba({{ module.style.image_background_color.color|convert_rgb  }},{{ module.style.image_background_color.opacity/100 }});
+  }
+
+  .cm_about_banner .cm_pop_vid_btn {
+    color: rgba({{ module.style.media_button.color.color|convert_rgb  }},{{ module.style.media_button.color.opacity/100 }});
+  }
+
+  .cm_about_banner .cm_pop_vid_btn svg rect {
+    fill: rgba({{ module.style.media_button.color.color|convert_rgb  }},{{ module.style.media_button.color.opacity/100 }});
+  }
+
+  .cm_about_banner .cm_pop_vid_btn:hover {
+    color: rgba({{ module.style.media_button.hover_color.color|convert_rgb  }},{{ module.style.media_button.hover_color.opacity/100 }});
+  }
+
+  .cm_about_banner .cm_pop_vid_btn:hover svg rect {
+    fill: rgba({{ module.style.media_button.hover_color.color|convert_rgb  }},{{ module.style.media_button.hover_color.opacity/100 }});
+  }
+
+  .cm_about_banner {
+    {{ module.style.desktop_spacing.css }}
+  }
+
+  @media (max-width: 767px) {
+    .cm_about_banner {
+      {{ module.style.mobile_spacing.css }}
+    }
+  }
+</style>
+{% end_require_css %}

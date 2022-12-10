@@ -1,0 +1,83 @@
+<!--
+templateType: global_partial
+isAvailableForNewContent: false
+label: Website Footer
+-->
+
+{# Footer drag and drop area #}
+{% dnd_area "footer" label="footer", class="footer_dnd" %}
+
+{% dnd_section full_width = true, padding = {'top' : '0','bottom' : '0','left' : '0','right' : '0',} %}
+{% dnd_module
+        path="../../modules/Footer",
+        offset=0,
+        width=12,
+        social_icons={
+          "social" : [ {
+            "icon" : {
+              "name" : "Facebook Square",
+              "type" : "REGULAR",
+              "unicode" : "f082"
+            },
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "text" : "Facebook"
+          }, {
+            "icon" : {
+              "name" : "Instagram Square",
+              "type" : "REGULAR",
+              "unicode" : "e055"
+            },
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "text" : "Instagram"
+          }, {
+            "icon" : {
+              "name" : "LinkedIn",
+              "type" : "REGULAR",
+              "unicode" : "f08c"
+            },
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "text" : "LinkedIn"
+          }, {
+            "icon" : {
+              "name" : "YouTube Square",
+              "type" : "REGULAR",
+              "unicode" : "f431"
+            },
+            "link_field" : {
+              "no_follow" : false,
+              "open_in_new_tab" : false,
+              "url" : {
+                "href" : "",
+                "type" : "EXTERNAL"
+              }
+            },
+            "text" : "YouTube"
+          } ],
+          "title" : "Follow us"
+        }
+      %}
+{% end_dnd_module %}
+{% end_dnd_section %}
+
+{% end_dnd_area %}

@@ -1,0 +1,462 @@
+[ {
+  "id" : "7cdbe23e-535a-a529-c007-a2b0507b34d5",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "f0810fdf-cc38-0f26-dda6-eee95f868061",
+    "name" : "desktop_spacing",
+    "display_width" : null,
+    "label" : "Desktop spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "d2514308-8358-ea07-d069-187a705d50f1",
+    "name" : "mobile_spacing",
+    "display_width" : null,
+    "label" : "Mobile spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "17c05201-e277-f169-f74b-a537f9755e0e",
+    "name" : "item_background_color",
+    "display_width" : null,
+    "label" : "Item background color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "desktop_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "mobile_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "item_background_color" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "65e4f684-e974-af60-344a-4d3fe154f213",
+  "name" : "title_header_type",
+  "display_width" : null,
+  "label" : "Heading type",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "1", "H1" ], [ "2", "H2" ], [ "3", "H3" ], [ "4", "H4" ], [ "5", "H5" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "type" : "choice",
+  "default" : "1"
+}, {
+  "id" : "f8385bd4-d8a2-81a6-8022-3726c8ec2811",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "The Fastest <br>Grocery Store <br>in <b>Your City</b>!"
+}, {
+  "id" : "ba8b37a4-6bbd-3216-9294-c2bfd4e42bc2",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Lorem ipsum dolor sit amet, consectetur<br>adipiscing elit. Aliquam nascetur<br>consectetur a pretium diam. Nisl lorem.</p>"
+}, {
+  "id" : "05a587ff-3c61-44ca-1fde-6311adcb29a6",
+  "name" : "apply_button",
+  "display_width" : null,
+  "label" : "Apply button",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "90336eef-cbe5-397a-68f1-7dc84ed49639",
+  "name" : "button_settings",
+  "display_width" : null,
+  "label" : "Button",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "05a587ff-3c61-44ca-1fde-6311adcb29a6",
+    "controlling_field_path" : null,
+    "controlling_value_regex" : "true",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "a4ee02bc-0351-bfdb-aa72-f4ad98cb9743",
+    "name" : "button_type",
+    "display_width" : null,
+    "label" : "Button type",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "std", "Standard" ], [ "cta", "CTA" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "type" : "choice",
+    "default" : "std"
+  }, {
+    "id" : "6b8a33b4-75a9-d637-f22f-c26d7bdbd35a",
+    "name" : "button_text",
+    "display_width" : null,
+    "label" : "Button text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "a4ee02bc-0351-bfdb-aa72-f4ad98cb9743",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "std",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Order Now"
+  }, {
+    "id" : "1eeff64b-bf03-0baa-ee6b-ba363af7b656",
+    "name" : "button_link",
+    "display_width" : null,
+    "label" : "Button link",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "6b8a33b4-75a9-d637-f22f-c26d7bdbd35a",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : null,
+      "property" : null,
+      "operator" : "NOT_EMPTY",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "816699e3-80f4-8e0b-7e37-058783795e57",
+    "name" : "select_cta",
+    "display_width" : null,
+    "label" : "Select CTA",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "a4ee02bc-0351-bfdb-aa72-f4ad98cb9743",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "cta",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "type" : "cta"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "button_type" : "std",
+    "button_text" : "Order Now",
+    "button_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+}, {
+  "id" : "9fef451e-11f1-4c99-8e01-c01d99dcb328",
+  "name" : "background_image",
+  "display_width" : null,
+  "label" : "Background image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : false,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/BACKGROUND.png",
+    "alt" : "Background",
+    "loading" : "lazy",
+    "width" : 403,
+    "height" : 699,
+    "max_width" : 403,
+    "max_height" : 699
+  }
+}, {
+  "id" : "b82170c0-42ed-52b8-8536-1d1ddd5053c4",
+  "name" : "add_grocery_item",
+  "display_width" : null,
+  "label" : "Add grocery item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "ee5b3642-bfaa-9d51-bc53-0271b2983565",
+    "default" : 4
+  },
+  "children" : [ {
+    "id" : "51841af2-f03c-25bd-6913-a194706fe7b1",
+    "name" : "link",
+    "display_width" : null,
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "42b71694-0027-f2f2-2c08-dc0fcd644733",
+    "name" : "image",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : false,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "exact",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Tomatoes.png",
+      "alt" : "Tomatoes",
+      "loading" : "lazy",
+      "width" : 328,
+      "height" : 250
+    }
+  }, {
+    "id" : "ee5b3642-bfaa-9d51-bc53-0271b2983565",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Tomatoes"
+  }, {
+    "id" : "ffedce8a-e395-0f48-c825-81159f98d926",
+    "name" : "price",
+    "display_width" : null,
+    "label" : "Price",
+    "required" : false,
+    "locked" : false,
+    "display" : "text",
+    "step" : 1,
+    "type" : "number",
+    "default" : 9
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "image" : {
+      "size_type" : "exact",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Tomatoes.png",
+      "alt" : "Tomatoes",
+      "loading" : "lazy",
+      "width" : 328,
+      "height" : 250
+    },
+    "title" : "Tomatoes",
+    "price" : 9
+  }, {
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "image" : {
+      "size_type" : "exact",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Tomatoes.png",
+      "alt" : "Tomatoes",
+      "loading" : "lazy",
+      "width" : 328,
+      "height" : 250
+    },
+    "title" : "Tomatoes",
+    "price" : 9
+  }, {
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "image" : {
+      "size_type" : "exact",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Tomatoes.png",
+      "alt" : "Tomatoes",
+      "loading" : "lazy",
+      "width" : 328,
+      "height" : 250
+    },
+    "title" : "Tomatoes",
+    "price" : 9
+  }, {
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    },
+    "image" : {
+      "size_type" : "exact",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Tomatoes.png",
+      "alt" : "Tomatoes",
+      "loading" : "lazy",
+      "width" : 328,
+      "height" : 250
+    },
+    "title" : "Tomatoes",
+    "price" : 9
+  } ]
+} ]

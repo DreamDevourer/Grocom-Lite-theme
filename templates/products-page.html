@@ -1,0 +1,205 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: Products Page
+screenshotPath: ../images/template-previews/products.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+
+  {% dnd_area 'dnd_area' class='body-container body-container--products', label='Main section' %}
+  
+    {% dnd_section
+      padding={
+        "default" : {
+          "bottom" : "0px",
+          "top" : "0px"
+        }
+      },
+      full_width=true
+    %}
+      {% dnd_column
+        offset=0,
+        width=12,
+        padding={
+          "default" : {
+            "left" : "0px",
+            "right" : "0px"
+          }
+        }
+      %}
+        {% dnd_row %}
+          {% dnd_module
+            path="../modules/Groceries",
+            offset=0,
+            width=12,
+            add_product=[ {
+              "image_field" : {
+                "alt" : "Grocery",
+                "height" : 480,
+                "loading" : "lazy",
+                "max_height" : 480,
+                "max_width" : 320,
+                "size_type" : "auto",
+                "src" : get_asset_url('../images/Grocery_item_1.jpeg'),
+                "width" : 320
+              },
+              "price_in_" : "6.79",
+              "title" : "Cabbage"
+            }, {
+              "image_field" : {
+                "alt" : "Grocery",
+                "height" : 480,
+                "loading" : "lazy",
+                "max_height" : 480,
+                "max_width" : 320,
+                "size_type" : "auto",
+                "src" : get_asset_url('../images/Grocery_item_2.jpeg'),
+                "width" : 320
+              },
+              "price_in_" : "6.79",
+              "title" : "Cabbage"
+            }, {
+              "image_field" : {
+                "alt" : "Grocery",
+                "height" : 480,
+                "loading" : "lazy",
+                "max_height" : 480,
+                "max_width" : 320,
+                "size_type" : "auto",
+                "src" : get_asset_url('../images/Grocery_item_3.jpeg'),
+                "width" : 320
+              },
+              "price_in_" : "6.79",
+              "title" : "Cabbage"
+            }, {
+              "image_field" : {
+                "alt" : "Grocery",
+                "height" : 360,
+                "loading" : "lazy",
+                "max_height" : 360,
+                "max_width" : 480,
+                "size_type" : "auto",
+                "src" : get_asset_url('../images/Grocery_item_4.jpeg'),
+                "width" : 480
+              },
+              "price_in_" : "6.79",
+              "title" : "Cabbage"
+            }, {
+              "image_field" : {
+                "alt" : "Grocery",
+                "height" : 319,
+                "loading" : "lazy",
+                "max_height" : 319,
+                "max_width" : 480,
+                "size_type" : "auto",
+                "src" : get_asset_url('../images/Grocery_item_5.jpeg'),
+                "width" : 480
+              },
+              "price_in_" : "6.79",
+              "title" : "Cabbage"
+            }, {
+              "image_field" : {
+                "alt" : "Grocery",
+                "height" : 360,
+                "loading" : "lazy",
+                "max_height" : 360,
+                "max_width" : 480,
+                "size_type" : "auto",
+                "src" : get_asset_url('../images/Grocery_item_6.jpeg'),
+                "width" : 480
+              },
+              "price_in_" : "6.79",
+              "title" : "Cabbage"
+            }, {
+              "image_field" : {
+                "alt" : "Grocery",
+                "height" : 480,
+                "loading" : "lazy",
+                "max_height" : 480,
+                "max_width" : 360,
+                "size_type" : "auto",
+                "src" : get_asset_url('../images/Grocery_item_7.jpeg'),
+                "width" : 360
+              },
+              "price_in_" : "6.79",
+              "title" : "Cabbage"
+            }, {
+              "image_field" : {
+                "alt" : "Grocery",
+                "height" : 480,
+                "loading" : "lazy",
+                "max_height" : 480,
+                "max_width" : 479,
+                "size_type" : "auto",
+                "src" : get_asset_url('../images/Grocery_item_8.jpeg'),
+                "width" : 479
+              },
+              "price_in_" : "6.79",
+              "title" : "Cabbage"
+            }, {
+              "image_field" : {
+                "alt" : "Grocery",
+                "height" : 480,
+                "loading" : "lazy",
+                "max_height" : 480,
+                "max_width" : 384,
+                "size_type" : "auto",
+                "src" : get_asset_url('../images/Grocery_item_9.jpeg'),
+                "width" : 384
+              },
+              "price_in_" : "6.79",
+              "title" : "Cabbage"
+            } ],
+            button_text="Load More",
+            heading="Choose <b>Your</b> Groceries",
+            heading_type="3"
+          %}
+            {% module_attribute "content" %}
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nascetur.</p>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+  
+    {% dnd_section
+      padding={
+        "default" : {
+          "bottom" : "0px",
+          "left" : "0px",
+          "right" : "0px",
+          "top" : "0px"
+        }
+      },
+      full_width=true
+    %}
+      {% dnd_column
+        offset=0,
+        width=12,
+        padding={
+          "default" : {
+            "bottom" : "0px",
+            "left" : "0px",
+            "right" : "0px",
+            "top" : "0px"
+          }
+        }
+      %}
+        {% dnd_row %}
+          {% dnd_module
+            path="../modules/Best Delivered Categories",
+            offset=0,
+            width=12
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+  
+  {% end_dnd_area %}
+
+</main>
+{% endblock body %}

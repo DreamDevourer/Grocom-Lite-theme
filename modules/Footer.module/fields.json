@@ -1,0 +1,492 @@
+[ {
+  "id" : "bbac5fcc-4bba-9960-09cc-6b16cc5984ed",
+  "name" : "footer_logo",
+  "display_width" : null,
+  "label" : "Footer Logo",
+  "required" : false,
+  "locked" : false,
+  "show_loading" : false,
+  "type" : "logo",
+  "default" : {
+    "override_inherited_src" : true,
+    "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/LOGO.png",
+    "alt" : "LOGO",
+    "suppress_company_name" : true,
+    "width" : 756,
+    "height" : 277
+  }
+}, {
+  "id" : "fff72237-7f0d-3f1c-1df7-780b3528e367",
+  "name" : "caption",
+  "display_width" : null,
+  "label" : "Caption",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "The Fastest Grocery Store in Your City!"
+}, {
+  "id" : "d77d603a-7333-a29d-5c39-7b166287297f",
+  "name" : "footer_menu",
+  "display_width" : null,
+  "label" : "Footer Menu",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "13344494-8e9c-f523-6e03-e593c10db129",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "General"
+  }, {
+    "id" : "fae95259-63be-d31d-a6b3-8c4ec27a2423",
+    "name" : "simple_menu",
+    "display_width" : null,
+    "label" : "Simple Menu",
+    "required" : false,
+    "locked" : false,
+    "type" : "simplemenu",
+    "default" : [ {
+      "isPublished" : false,
+      "pageLinkId" : null,
+      "contentGroupId" : null,
+      "pageLinkName" : null,
+      "isDeleted" : null,
+      "categoryId" : null,
+      "subCategory" : null,
+      "contentType" : null,
+      "state" : null,
+      "linkLabel" : "About Us",
+      "linkUrl" : null,
+      "linkParams" : null,
+      "linkTarget" : null,
+      "type" : "PAGE_LINK",
+      "children" : [ ]
+    }, {
+      "isPublished" : false,
+      "pageLinkId" : null,
+      "contentGroupId" : null,
+      "pageLinkName" : null,
+      "isDeleted" : null,
+      "categoryId" : null,
+      "subCategory" : null,
+      "contentType" : null,
+      "state" : null,
+      "linkLabel" : "Career",
+      "linkUrl" : null,
+      "linkParams" : null,
+      "linkTarget" : null,
+      "type" : "PAGE_LINK",
+      "children" : [ ]
+    }, {
+      "isPublished" : false,
+      "pageLinkId" : null,
+      "contentGroupId" : null,
+      "pageLinkName" : null,
+      "isDeleted" : null,
+      "categoryId" : null,
+      "subCategory" : null,
+      "contentType" : null,
+      "state" : null,
+      "linkLabel" : "Press",
+      "linkUrl" : null,
+      "linkParams" : null,
+      "linkTarget" : null,
+      "type" : "PAGE_LINK",
+      "children" : [ ]
+    }, {
+      "isPublished" : false,
+      "pageLinkId" : null,
+      "contentGroupId" : null,
+      "pageLinkName" : null,
+      "isDeleted" : null,
+      "categoryId" : null,
+      "subCategory" : null,
+      "contentType" : null,
+      "state" : null,
+      "linkLabel" : "Privacy policy and Opt Out",
+      "linkUrl" : null,
+      "linkParams" : null,
+      "linkTarget" : null,
+      "type" : "PAGE_LINK",
+      "children" : [ ]
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "title" : "General",
+    "simple_menu" : [ {
+      "isPublished" : false,
+      "pageLinkId" : null,
+      "contentGroupId" : null,
+      "pageLinkName" : null,
+      "isDeleted" : null,
+      "categoryId" : null,
+      "subCategory" : null,
+      "contentType" : null,
+      "state" : null,
+      "linkLabel" : "About Us",
+      "linkUrl" : null,
+      "linkParams" : null,
+      "linkTarget" : null,
+      "type" : "PAGE_LINK",
+      "children" : [ ]
+    }, {
+      "isPublished" : false,
+      "pageLinkId" : null,
+      "contentGroupId" : null,
+      "pageLinkName" : null,
+      "isDeleted" : null,
+      "categoryId" : null,
+      "subCategory" : null,
+      "contentType" : null,
+      "state" : null,
+      "linkLabel" : "Career",
+      "linkUrl" : null,
+      "linkParams" : null,
+      "linkTarget" : null,
+      "type" : "PAGE_LINK",
+      "children" : [ ]
+    }, {
+      "isPublished" : false,
+      "pageLinkId" : null,
+      "contentGroupId" : null,
+      "pageLinkName" : null,
+      "isDeleted" : null,
+      "categoryId" : null,
+      "subCategory" : null,
+      "contentType" : null,
+      "state" : null,
+      "linkLabel" : "Press",
+      "linkUrl" : null,
+      "linkParams" : null,
+      "linkTarget" : null,
+      "type" : "PAGE_LINK",
+      "children" : [ ]
+    }, {
+      "isPublished" : false,
+      "pageLinkId" : null,
+      "contentGroupId" : null,
+      "pageLinkName" : null,
+      "isDeleted" : null,
+      "categoryId" : null,
+      "subCategory" : null,
+      "contentType" : null,
+      "state" : null,
+      "linkLabel" : "Privacy policy and Opt Out",
+      "linkUrl" : null,
+      "linkParams" : null,
+      "linkTarget" : null,
+      "type" : "PAGE_LINK",
+      "children" : [ ]
+    } ]
+  }
+}, {
+  "id" : "2d9effe7-77dc-1b92-5bd0-e4af54e439b0",
+  "name" : "blog",
+  "display_width" : null,
+  "label" : "Blog",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "126512a0-541c-059d-e883-24743c7cbe60",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Blog"
+  }, {
+    "id" : "cfe1ccb4-8a86-9c3e-1119-466f483207a2",
+    "name" : "simple_menu",
+    "display_width" : null,
+    "label" : "Simple Menu",
+    "required" : false,
+    "locked" : false,
+    "type" : "simplemenu",
+    "default" : [ {
+      "isPublished" : false,
+      "pageLinkId" : null,
+      "contentGroupId" : null,
+      "pageLinkName" : null,
+      "isDeleted" : null,
+      "categoryId" : null,
+      "subCategory" : null,
+      "contentType" : null,
+      "state" : null,
+      "linkLabel" : "Blog content",
+      "linkUrl" : null,
+      "linkParams" : null,
+      "linkTarget" : null,
+      "type" : "PAGE_LINK",
+      "children" : [ ]
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "title" : "Blog",
+    "simple_menu" : [ {
+      "isPublished" : false,
+      "pageLinkId" : null,
+      "contentGroupId" : null,
+      "pageLinkName" : null,
+      "isDeleted" : null,
+      "categoryId" : null,
+      "subCategory" : null,
+      "contentType" : null,
+      "state" : null,
+      "linkLabel" : "Blog content",
+      "linkUrl" : null,
+      "linkParams" : null,
+      "linkTarget" : null,
+      "type" : "PAGE_LINK",
+      "children" : [ ]
+    } ]
+  }
+}, {
+  "id" : "5b8bf692-8bf8-15db-fb91-f280ede243ab",
+  "name" : "social_icons",
+  "display_width" : null,
+  "label" : "Social Icons",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "1121929a-6b07-1d57-ec26-6234885ba0a0",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Follow us"
+  }, {
+    "id" : "dd2a581c-cba3-ace6-d6b4-f97ad103e81f",
+    "name" : "social",
+    "display_width" : null,
+    "label" : "Social",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : "49455680-12dd-0397-20e2-60f072c4e1c6",
+      "default" : 4
+    },
+    "children" : [ {
+      "id" : "b35b9837-7774-c717-5418-26bc98d646f3",
+      "name" : "icon",
+      "display_width" : null,
+      "label" : "Icon",
+      "required" : false,
+      "locked" : false,
+      "icon_set" : "fontawesome-5.14.0",
+      "type" : "icon",
+      "default" : {
+        "name" : "Facebook Square",
+        "unicode" : "f082",
+        "type" : "REGULAR"
+      }
+    }, {
+      "id" : "49455680-12dd-0397-20e2-60f072c4e1c6",
+      "name" : "text",
+      "display_width" : null,
+      "label" : "Text",
+      "required" : false,
+      "locked" : false,
+      "validation_regex" : "",
+      "allow_new_line" : false,
+      "show_emoji_picker" : false,
+      "type" : "text",
+      "default" : "Facebook"
+    }, {
+      "id" : "7029a3c9-faad-7120-e557-aa4cc3b066b2",
+      "name" : "link_field",
+      "display_width" : null,
+      "label" : "Link",
+      "required" : false,
+      "locked" : false,
+      "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+      "show_advanced_rel_options" : false,
+      "type" : "link",
+      "default" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : [ {
+      "icon" : {
+        "name" : "Facebook Square",
+        "unicode" : "f082",
+        "type" : "REGULAR"
+      },
+      "text" : "Facebook",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon" : {
+        "name" : "Facebook Square",
+        "unicode" : "f082",
+        "type" : "REGULAR"
+      },
+      "text" : "Facebook",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon" : {
+        "name" : "Facebook Square",
+        "unicode" : "f082",
+        "type" : "REGULAR"
+      },
+      "text" : "Facebook",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon" : {
+        "name" : "Facebook Square",
+        "unicode" : "f082",
+        "type" : "REGULAR"
+      },
+      "text" : "Facebook",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "title" : "Follow us",
+    "social" : [ {
+      "icon" : {
+        "name" : "Facebook Square",
+        "unicode" : "f082",
+        "type" : "REGULAR"
+      },
+      "text" : "Facebook",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon" : {
+        "name" : "Facebook Square",
+        "unicode" : "f082",
+        "type" : "REGULAR"
+      },
+      "text" : "Facebook",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon" : {
+        "name" : "Facebook Square",
+        "unicode" : "f082",
+        "type" : "REGULAR"
+      },
+      "text" : "Facebook",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    }, {
+      "icon" : {
+        "name" : "Facebook Square",
+        "unicode" : "f082",
+        "type" : "REGULAR"
+      },
+      "text" : "Facebook",
+      "link_field" : {
+        "url" : {
+          "content_id" : null,
+          "type" : "EXTERNAL",
+          "href" : ""
+        },
+        "open_in_new_tab" : false,
+        "no_follow" : false
+      }
+    } ]
+  }
+}, {
+  "id" : "fe74d3fb-210a-abd1-9318-d2ba4e2f07f1",
+  "name" : "copyright_content",
+  "display_width" : null,
+  "label" : "Copyright Content",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "@2022"
+} ]

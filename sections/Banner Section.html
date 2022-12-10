@@ -1,0 +1,104 @@
+<!--
+  templateType: section
+  label: Banner Section
+  isAvailableForNewContent: true
+  description: ""
+  screenshotPath: ../images/thumbnails/Banner Section.png
+-->
+{% dnd_section
+  padding={
+    "default" : {
+      "bottom" : "0px",
+      "left" : "0px",
+      "right" : "0px",
+      "top" : "0px"
+    }
+  },
+  full_width=true
+%}
+  {% dnd_column
+    offset=0,
+    width=12,
+    padding={
+      "default" : {
+        "bottom" : "0px",
+        "left" : "0px",
+        "right" : "0px",
+        "top" : "0px"
+      }
+    }
+  %}
+    {% dnd_row %}
+      {% dnd_module
+        path="../modules/Banner",
+        offset=0,
+        width=12,
+        style={
+          "background_color" : {
+            "color" : "#FFFFFF",
+            "opacity" : 100
+          },
+          "card" : {
+            "background_color" : {
+              "color" : "#000000",
+              "opacity" : 100
+            },
+            "content_color" : {
+              "color" : "#AFAFAF",
+              "opacity" : 100
+            },
+            "corner_radius" : 42,
+            "heading_color" : {
+              "color" : "#FFFFFF",
+              "opacity" : 100
+            }
+          },
+          "desktop_spacing" : {
+            "padding" : {
+              "bottom" : {
+                "units" : "px",
+                "value" : 50
+              },
+              "left" : { },
+              "right" : { },
+              "top" : {
+                "units" : "px",
+                "value" : 50
+              }
+            }
+          },
+          "mobile_spacing" : {
+            "padding" : {
+              "bottom" : {
+                "units" : "px",
+                "value" : 50
+              },
+              "left" : { },
+              "right" : { },
+              "top" : {
+                "units" : "px",
+                "value" : 50
+              }
+            }
+          }
+        },
+        card={
+          "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nascetur consectetur.</p>",
+          "heading" : "Access the Menu in your Smartphone",
+          "heading_type" : "6",
+          "image_field" : {
+            "alt" : "Smartphone",
+            "height" : 610,
+            "loading" : "lazy",
+            "max_height" : 610,
+            "max_width" : 360,
+            "size_type" : "auto",
+            "src" : get_asset_url('../images/Smartphone.png'),
+            "width" : 360
+          }
+        }
+      %}
+      {% end_dnd_module %}
+    {% end_dnd_row %}
+  {% end_dnd_column %}
+{% end_dnd_section %}

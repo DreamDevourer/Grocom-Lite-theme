@@ -1,0 +1,445 @@
+<!--
+templateType: page
+isAvailableForNewContent: true
+label: About Us Page
+screenshotPath: ../images/template-previews/about-us.png
+-->
+{% extends "./layouts/base.html" %}
+
+{% block body %}
+<main id="main-content" class="body-container-wrapper">
+
+  {% dnd_area 'dnd_area' class='body-container body-container--about', label='Main section' %}
+  
+    {% dnd_section
+      padding={
+        "default" : {
+          "bottom" : "0px",
+          "top" : "0px"
+        }
+      },
+      full_width=true
+    %}
+      {% dnd_column
+        offset=0,
+        width=12,
+        padding={
+          "default" : {
+            "left" : "0px",
+            "right" : "0px"
+          }
+        }
+      %}
+        {% dnd_row %}
+          {% dnd_module
+            path="../modules/About us banner",
+            offset=0,
+            width=12,
+            floating_image={
+              "alt" : "Bread",
+              "height" : 395,
+              "loading" : "lazy",
+              "size_type" : "exact",
+              "src" : get_asset_url('../images/Bread.png'),
+              "width" : 1122
+            },
+            heading="The Number <b>#One</b> Choice Your Hunger Solution",
+            heading_type="1",
+            image_field={
+              "alt" : "Leaf",
+              "height" : 329,
+              "loading" : "lazy",
+              "size_type" : "exact",
+              "src" : get_asset_url('../images/Leaf_2.png'),
+              "width" : 274
+            },
+            media_button_text="We provide the best",
+            video_id="-gA6h4EfmHI",
+            video_type="youtube"
+          %}
+            {% module_attribute "content" %}
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nascetur consectetur a pretium diam. Nisl lorem.</p>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+  
+    {% dnd_section
+      padding={
+        "default" : {
+          "bottom" : "0px",
+          "left" : "0px",
+          "right" : "0px",
+          "top" : "0px"
+        }
+      },
+      full_width=true
+    %}
+      {% dnd_column
+        offset=0,
+        width=12,
+        padding={
+          "default" : {
+            "bottom" : "0px",
+            "left" : "0px",
+            "right" : "0px",
+            "top" : "0px"
+          }
+        }
+      %}
+        {% dnd_row %}
+          {% dnd_module
+            path="../modules/Content with image card",
+            offset=0,
+            width=12,
+            card=[ {
+              "add_image" : [ {
+                "alt" : "grocom1",
+                "height" : 175,
+                "max_height" : 175,
+                "max_width" : 160,
+                "src" : get_asset_url('../images/grocom1.png'),
+                "width" : 160
+              }, {
+                "alt" : "grocom3",
+                "height" : 79,
+                "max_height" : 79,
+                "max_width" : 160,
+                "src" : get_asset_url('../images/grocom3.png'),
+                "width" : 160
+              }, {
+                "alt" : "grocom6",
+                "height" : 79,
+                "max_height" : 79,
+                "max_width" : 189,
+                "src" : get_asset_url('../images/grocom6.png'),
+                "width" : 189
+              }, {
+                "alt" : "grocom4",
+                "height" : 124,
+                "max_height" : 124,
+                "max_width" : 160,
+                "src" : get_asset_url('../images/grocom4.png'),
+                "width" : 160
+              }, {
+                "alt" : "grocom7",
+                "height" : 219,
+                "max_height" : 219,
+                "max_width" : 189,
+                "src" : get_asset_url('../images/grocom7.png'),
+                "width" : 189
+              }, {
+                "alt" : "grocom2",
+                "height" : 125,
+                "max_height" : 125,
+                "max_width" : 160,
+                "src" : get_asset_url('../images/grocom2.png'),
+                "width" : 160
+              }, {
+                "alt" : "grocom5",
+                "height" : 82,
+                "max_height" : 82,
+                "max_width" : 160,
+                "src" : get_asset_url('../images/grocom5.png'),
+                "width" : 160
+              } ],
+              "column_type" : "full_col",
+              "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nascetur consectetur.</p>",
+              "heading" : "Additional Quality",
+              "heading_type" : "6",
+              "image_field" : {
+                "alt" : "Additional Quality",
+                "height" : 480,
+                "loading" : "lazy",
+                "max_height" : 480,
+                "max_width" : 928,
+                "size_type" : "auto",
+                "src" : get_asset_url('../images/Additional Quality.jpg'),
+                "width" : 928
+              },
+              "image_type" : "multiple"
+            }, {
+              "add_image" : [ {
+                "alt" : "grocom1",
+                "height" : 175,
+                "max_height" : 175,
+                "max_width" : 160,
+                "src" : get_asset_url('../images/grocom1.png'),
+                "width" : 160
+              }, {
+                "alt" : "grocom3",
+                "height" : 79,
+                "max_height" : 79,
+                "max_width" : 160,
+                "src" : get_asset_url('../images/grocom3.png'),
+                "width" : 160
+              }, {
+                "alt" : "grocom6",
+                "height" : 79,
+                "max_height" : 79,
+                "max_width" : 189,
+                "src" : get_asset_url('../images/grocom6.png'),
+                "width" : 189
+              }, {
+                "alt" : "grocom3",
+                "height" : 79,
+                "max_height" : 79,
+                "max_width" : 160,
+                "src" : get_asset_url('../images/grocom3.png'),
+                "width" : 160
+              }, {
+                "alt" : "grocom4",
+                "height" : 124,
+                "max_height" : 124,
+                "max_width" : 160,
+                "src" : get_asset_url('../images/grocom4.png'),
+                "width" : 160
+              }, {
+                "alt" : "grocom7",
+                "height" : 219,
+                "max_height" : 219,
+                "max_width" : 189,
+                "src" : get_asset_url('../images/grocom7.png'),
+                "width" : 189
+              }, {
+                "alt" : "grocom4",
+                "height" : 124,
+                "max_height" : 124,
+                "max_width" : 160,
+                "src" : get_asset_url('../images/grocom4.png'),
+                "width" : 160
+              }, {
+                "alt" : "grocom2",
+                "height" : 125,
+                "max_height" : 125,
+                "max_width" : 160,
+                "src" : get_asset_url('../images/grocom2.png'),
+                "width" : 160
+              }, {
+                "alt" : "grocom5",
+                "height" : 82,
+                "max_height" : 82,
+                "max_width" : 160,
+                "src" : get_asset_url('../images/grocom5.png'),
+                "width" : 160
+              }, {
+                "alt" : "grocom5",
+                "height" : 82,
+                "max_height" : 82,
+                "max_width" : 160,
+                "src" : get_asset_url('../images/grocom5.png'),
+                "width" : 160
+              } ],
+              "column_type" : "half_col",
+              "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nascetur consectetur.</p>",
+              "heading" : "Additional Quality",
+              "heading_type" : "6",
+              "image_field" : {
+                "alt" : "Additional Quality",
+                "height" : 480,
+                "loading" : "lazy",
+                "max_height" : 480,
+                "max_width" : 928,
+                "size_type" : "auto",
+                "src" : get_asset_url('../images/Additional Quality.jpg'),
+                "width" : 928
+              },
+              "image_type" : "multiple"
+            }, {
+              "column_type" : "half_col",
+              "content" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nascetur consectetur. Aliquam nascetur consectetur a pretium diam. Nisl lorem.</p>",
+              "heading" : "Additional Quality",
+              "heading_type" : "6",
+              "image_field" : {
+                "alt" : "Rectangle 502",
+                "height" : 480,
+                "loading" : "lazy",
+                "max_height" : 480,
+                "max_width" : 928,
+                "size_type" : "auto",
+                "src" : get_asset_url('../images/Additional Quality.jpg'),
+                "width" : 928
+              },
+              "image_type" : "single"
+            } ],
+            style={
+              "background_color" : {
+                "color" : "#FFFFFF",
+                "opacity" : 100
+              },
+              "card" : {
+                "background_color" : {
+                  "color" : "#000000",
+                  "opacity" : 100
+                },
+                "content_color" : {
+                  "color" : "#AFAFAF",
+                  "opacity" : 100
+                },
+                "corner_radius" : 42,
+                "heading_color" : {
+                  "color" : "#FFFFFF",
+                  "opacity" : 100
+                }
+              },
+              "desktop_spacing" : {
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 50
+                  },
+                  "left" : { },
+                  "right" : { },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 50
+                  }
+                }
+              },
+              "mobile_spacing" : {
+                "padding" : {
+                  "bottom" : {
+                    "units" : "px",
+                    "value" : 50
+                  },
+                  "left" : { },
+                  "right" : { },
+                  "top" : {
+                    "units" : "px",
+                    "value" : 50
+                  }
+                }
+              }
+            },
+            heading_type="3",
+            heading="Why go <b>grocom</b>?"
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+  
+    {% dnd_section
+      padding={
+        "default" : {
+          "bottom" : "0px",
+          "top" : "0px"
+        }
+      },
+      full_width=true
+    %}
+      {% dnd_column
+        offset=0,
+        width=12,
+        padding={
+          "default" : {
+            "left" : "0px",
+            "right" : "0px"
+          }
+        }
+      %}
+        {% dnd_row %}
+          {% dnd_module
+            path="../modules/FAQ",
+            offset=0,
+            width=12,
+            faq_items=[ {
+              "content" : "<p>If you’re based in the US, CA, UK or EU, yes. For all other regions, you will be charged in either EUR or USD.</p>",
+              "title" : "Will I be charged in my local currency?"
+            }, {
+              "content" : "<p>If you’re based in the US, CA, UK or EU, yes. For all other regions, you will be charged in either EUR or USD.</p>",
+              "title" : "Can I pause, deactivate or reactivate my subscription?"
+            }, {
+              "content" : "<p>If you’re based in the US, CA, UK or EU, yes. For all other regions, you will be charged in either EUR or USD.</p>",
+              "title" : "Can I pause, deactivate or reactivate my subscription?"
+            }, {
+              "content" : "<p>If you’re based in the US, CA, UK or EU, yes. For all other regions, you will be charged in either EUR or USD.</p>",
+              "title" : "Can I pause, deactivate or reactivate my subscription?"
+            } ],
+            heading="Frequently asked <b>questions</b>",
+            heading_type="3"
+          %}
+            {% module_attribute "content" %}
+              <p>Haven’t found what you’re looking for? Try our <a href="#">Help Center</a> — we’re here to help.</p>
+            {% end_module_attribute %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+  
+    {% dnd_section
+      padding={
+        "default" : {
+          "bottom" : "0px",
+          "top" : "0px"
+        }
+      },
+      full_width=true
+    %}
+      {% dnd_column
+        offset=0,
+        width=12,
+        padding={
+          "default" : {
+            "left" : "0px",
+            "right" : "0px"
+          }
+        }
+      %}
+        {% dnd_row %}
+          {% dnd_module
+            path="../modules/Quality products - Global",
+            offset=0,
+            width=12,
+            heading="Understand How We Deliver <b>Quality Products</b> to You",
+            heading_type="3",
+            quality_products_item=[ {
+              "content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "icon" : {
+                "icon_field" : {
+                  "name" : "Briefcase",
+                  "type" : "SOLID",
+                  "unicode" : "f0b1"
+                },
+                "icon_type" : "vector",
+                "vector_icon" : {
+                  "alt" : "Bag",
+                  "height" : 26,
+                  "loading" : "lazy",
+                  "size_type" : "exact",
+                  "src" : get_asset_url('../images/Bag.svg'),
+                  "width" : 28
+                }
+              },
+              "product_process" : [ "Lorem ipsum dolor sit", "Lorem ipsum dolor sit", "Lorem ipsum dolor sit" ]
+            }, {
+              "content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+              "icon" : {
+                "icon_field" : {
+                  "name" : "Briefcase",
+                  "type" : "SOLID",
+                  "unicode" : "f0b1"
+                },
+                "icon_type" : "vector",
+                "vector_icon" : {
+                  "alt" : "Bag",
+                  "height" : 26,
+                  "loading" : "lazy",
+                  "size_type" : "exact",
+                  "src" : get_asset_url('../images/Bag.svg'),
+                  "width" : 28
+                }
+              },
+              "product_process" : [ "Lorem ipsum dolor sit", "Lorem ipsum dolor sit", "Lorem ipsum dolor sit" ]
+            } ]
+          %}
+          {% end_dnd_module %}
+        {% end_dnd_row %}
+      {% end_dnd_column %}
+    {% end_dnd_section %}
+  
+  {% end_dnd_area %}
+
+</main>
+{% endblock body %}

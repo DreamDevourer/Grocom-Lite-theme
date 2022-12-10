@@ -1,0 +1,146 @@
+.post_banner {
+  background: #000;
+  color: #AFAFAF;
+  text-align: center;
+  padding: 50px 0 140px;
+}
+
+.post_banner h1 {
+  color: #fff;
+  margin-top: 30px;
+}
+.pst_ftr_img {
+  text-align: center;
+  margin-bottom: 80px;
+}
+.pst_ftr_img img {
+  border-radius: 7px;
+  margin-top: -120px;
+  width: 970px;
+  max-width: 100%;
+}
+.pst_cont {
+  margin-bottom: 16px;
+}
+.pst_tags_wrap {
+  text-align: center;
+  margin-bottom: 95px;
+}
+.pst_cont h6 {
+  font-size: 16px;
+  margin-bottom: 27px;
+  font-weight: 400;
+}
+.pst_cont {
+  font-size: 12px;
+  line-height: 1.5;
+}
+.pst_cont li strong {
+ font-weight: 400; 
+}
+.pst_cont ul li {
+  margin-bottom: 1rem;
+}
+.pst_tags_wrap .psted_date {
+  color: #C8C8C8;
+  font-family: 'Oxygen';
+  font-size: 12px;
+}
+.pst_tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-bottom: 24px;
+  border-bottom: 1px solid #F1F1F1;
+  max-width: 788px;
+  margin: 0 auto;
+}
+.pst_tags .pst_tag {
+  padding: 8px 14px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 26px rgb(0 0 0 / 10%);
+  border-radius: 5px;
+  margin: 0 8px 10px;
+  font-family: 'Oxygen';
+  font-size: 12px;
+  color: #C8C8C8;
+}
+.pst_athr {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 26px rgb(0 0 0 / 10%);
+  border-radius: 20px;
+  padding: 30px 40px;
+  max-width: 658px;
+  margin: 0 auto 80px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.pst_athr_img {
+  width: 25%;
+}
+.pst_athr_img img {
+  width: 100%;
+}
+.pst_athr_cont {
+  width: 75%;
+  padding-left: 50px;
+  padding-top: 15px;
+}
+.pst_athr_cont h6 {
+  font-size: 16px;
+  margin-bottom: 1em;
+  font-weight: 400;
+}
+.pst_athr_cont p {
+  font-size: 12px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.pst_athr_social ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+.pst_athr_social ul li {
+  margin-right: 12px;
+}
+.blog-comments .grecaptcha-badge {
+  margin: 0;
+}
+.blog-comments {
+  max-width: 900px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  border-radius: 12px;
+  padding: 35px;
+  box-shadow: 0px 4px 26px rgb(0 0 0 / 10%);
+  margin-bottom: 50px;
+}
+.blog-comments ul.no-list.hs-error-msgs.inputs-list label {
+  color: #ef6b51;
+}
+.pst_athr_social svg {
+  width: 22px;
+  height: 26px;
+}
+.body-container--blog-index {
+ overflow: hidden; 
+}
+
+
+@media (max-width: 767px) {
+  .pst_athr_img {
+    width: 140px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .pst_athr_cont {
+    padding-left: 0;
+    padding-top: 25px;
+    width: 100%;
+  }
+
+
+}

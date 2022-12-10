@@ -1,0 +1,83 @@
+body {
+  line-height: 1;
+}
+
+/* Paragraphs */
+
+p {
+  margin: 0 0 1rem;
+}
+
+/* Anchors */
+
+a,
+a:hover {
+  text-decoration: none;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+  margin: 0 0 1rem;
+}
+
+h1 b,
+h2 b,
+h3 b,
+h4 b,
+h5 b,
+h6 b {
+  font-weight: 600;
+}
+
+/* Lists */
+
+ul,
+ol {
+  margin: 0 0 1rem;
+}
+
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin: 0;
+}
+
+ul.no-list {
+  list-style: none;
+}
+
+/* Code blocks */
+
+code {
+  vertical-align: bottom;
+}
+
+/* Blockquotes */
+
+blockquote {
+  border-left: 2px solid;
+  margin: 0 0 1rem;
+  padding-left: 15px;
+}
+
+/* Horizontal rules */
+
+hr {
+  background-color: #CCC;
+  border: none;
+  color: #CCC;
+  height: 1px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

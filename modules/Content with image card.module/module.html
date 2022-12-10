@@ -1,0 +1,99 @@
+{% require_css %}
+<style>
+  .{{ name }} {
+    background-color: rgba({{ module.style.background_color.color|convert_rgb  }},{{ module.style.background_color.opacity/100 }});
+    {{ module.style.desktop_spacing.css }}
+  }
+  .{{ name }} .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .{{ name }} .hscwi_card {
+    background-color: rgba({{ module.style.card.background_color.color|convert_rgb }}, {{ module.style.card.background_color.opacity * .01 }});
+    color: rgba({{ module.style.card.content_color.color|convert_rgb }}, {{ module.style.card.content_color.opacity * .01 }});
+    border-radius: {{ module.style.card.corner_radius }}px;
+    overflow: hidden;
+  }
+  .{{ name }} .hscwi_card .hscwi_title {
+    color: rgba({{ module.style.card.heading_color.color|convert_rgb }}, {{ module.style.card.heading_color.opacity * .01 }});
+  }
+
+
+  @media (max-width: 767px) {
+    .{{ name }} {
+      {{ module.style.mobile_spacing.css }}
+    }
+  }
+</style>
+{% end_require_css %}
+
+<div class="hscwi_wrapper {{ name }}">
+  <div class="content-wrapper">
+    <div class="hscwi_main_title">
+      {% if module.heading %}
+      <div class="cm_title">
+        <h{{ module.heading_type }}>{{ module.heading }}</h{{ module.heading_type }}>
+      </div>
+      {% endif %}
+    </div>
+    <div class="row">
+      {% for item in module.card %}
+      <div class="hscwi_card_wrap {{ item.column_type }}">
+        <div class="hscwi_card">
+          <div class="hscwi_col hscwi_cont">
+            <div class="hscwi_cont_innr">
+              {% if item.heading %}
+              <div class="hscwi_title_wrap">
+                <h{{ item.heading_type }} class="hscwi_title">{{ item.heading }}</h{{ item.heading_type }}>
+              </div>
+              {% endif %}
+              <div class="hscwi_content">{{ item.content }}</div>
+            </div>
+          </div>
+          <div class="hscwi_col hscwi_img {{ item.image_type }}">
+            {% if item.image_type == "multiple" %}
+            <div class="multi_imgs_wrap">
+              <div class="gutter"></div>
+              {% for item2 in item.add_image %}
+              {% if item2.src %}
+              <div class="multi_imgs multi_img_{{ loop.index }}" style="background-image: url({{ item2.src }})"></div>
+              {% endif %}
+              {% endfor %}
+            </div>
+            {% else %}
+            {% if item.image_field.src %}
+            {% set sizeAttrs = 'width="{{ item.image_field.width }}" height="{{ item.image_field.height }}"' %}
+            {% if item.image_field.size_type == 'auto' %}
+            {% set sizeAttrs = 'width="{{ item.image_field.width }}" height="{{ item.image_field.height }}" style="max-width: 100%; height: auto;"' %}
+            {% elif item.image_field.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ item.image_field.max_width }}" height="{{ item.image_field.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading }}"' : '' %}
+            <img src="{{ item.image_field.src }}" alt="{{ item.image_field.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+            {% endif %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{{ require_js(get_asset_url('../../js/InfiniteScroll-Masonry.js')) }}
+{% require_js %}
+<script>
+  var $grid = $('.multi_imgs_wrap').masonry({
+    itemSelector: '.multi_imgs',
+    gutter: '.gutter',
+    percentPosition: true,
+    transitionDuration: 0,
+  });
+
+  $grid.imagesLoaded().progress( function() {
+    $grid.masonry();
+  });
+
+
+</script>
+{% end_require_js %}

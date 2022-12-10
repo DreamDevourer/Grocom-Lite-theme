@@ -1,0 +1,24 @@
+{
+  "label" : "Grocom Lite Theme",
+  "preview_path" : "./templates/home.html",
+  "screenshot_path" : "./images/template-previews/home.png",
+  "enable_domain_stylesheets" : false,
+  "is_available_for_new_content" : true,
+  "responsive_breakpoints" : [ {
+    "name" : "mobile",
+    "previewWidth" : {
+      "value" : 477,
+      "units" : "px"
+    },
+    "mediaQuery" : "@media (max-width: 767px)"
+  } ],
+  "version" : "2",
+  "author" : {
+    "name" : "Remotish Agency - Nicolas Mendes",
+    "email" : "marketplace@remotish.agency",
+    "url" : "https://www.remotish.agency/"
+  },
+  "documentation_url" : "https://marketplace.remotish.agency/grocom-lite-theme/documentation",
+  "example_url" : "https://marketplace.remotish.agency/grocom-lite-theme/",
+  "license" : "./license.txt"
+}

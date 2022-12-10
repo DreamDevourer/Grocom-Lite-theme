@@ -1,0 +1,85 @@
+{% if module.enable %}
+<header class="header_main">
+  <div class="content-wrapper">
+
+    <div class="cm_logo">
+      {% set loadingAttr = module.logo_field.loading != 'disabled' ? '{{ module.logo_field.loading }}' : '' %}
+      {% logo
+          override_inherited_src="{{ module.logo_field.override_inherited_src }}"
+          src="{{ module.logo_field.src }}"
+          alt="{{ module.logo_field.alt }}"
+          width="{{ module.logo_field.width }}"
+          height="{{ module.logo_field.height }}"
+          loading="{{ loadingAttr }}"
+          suppress_company_name="{{ module.logo_field.suppress_company_name }}"
+        %}
+    </div>
+
+    <div class="cm_menu_wrap">
+      {% if module.enable_menu %}
+      <div class="cm_menu">
+        {% menu id="{{ module.menu_field }}" %}
+      </div>
+      {% endif %}
+      {% if module.cart_section.icon_type == 'fontawesome' %}
+      <div class="cm_cart_wrap">
+        <span class="cart-count"></span>
+        {% set href = module.cart_section.link_field.url.href %}
+        {% if module.cart_section.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+        {% endif %}
+        <a href="{{ href }}" {% if module.cart_section.link_field.open_in_new_tab %}target="_blank"{% endif %} {% if module.cart_section.link_field.rel %}rel="{{ module.cart_section.link_field.rel }}"{% endif %}>
+          {% icon
+            name="{{ module.cart_section.icon_field.name }}"
+            style="{{ module.cart_section.icon_field.type }}"
+            unicode="{{ module.cart_section.icon_field.unicode }}"
+            icon_set="{{ module.cart_section.icon_field.icon_set }}"
+          %}
+        </a>
+      </div>
+      {% endif %}
+      {% if module.cart_section.icon_type == 'vector' %}
+      <div class="cm_cart_wrap">
+        <span class="cart-count"></span>
+        {% set href = module.cart_section.link_field.url.href %}
+        {% if module.cart_section.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+        {% endif %}
+        <a href="{{ href }}" {% if module.cart_section.link_field.open_in_new_tab %}target="_blank"{% endif %} {% if module.cart_section.link_field.rel %}rel="{{ module.cart_section.link_field.rel }}"{% endif %}>
+          {% if module.cart_section.vector_icon.src %}
+          {% set sizeAttrs = 'width="{{ module.cart_section.vector_icon.width }}" height="{{ module.cart_section.vector_icon.height }}"' %}
+          {% if module.cart_section.vector_icon.size_type == 'auto' %}
+          {% set sizeAttrs = 'width="{{ module.cart_section.vector_icon.width }}" height="{{ module.cart_section.vector_icon.height }}" style="max-width: 100%; height: auto;"' %}
+          {% elif module.cart_section.vector_icon.size_type == 'auto_custom_max' %}
+          {% set sizeAttrs = 'width="{{ module.cart_section.vector_icon.max_width }}" height="{{ module.cart_section.vector_icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+          {% set loadingAttr = module.cart_section.vector_icon.loading != 'disabled' ? 'loading="{{ module.cart_section.vector_icon.loading }}"' : '' %}
+          <img src="{{ module.cart_section.vector_icon.src }}" alt="{{ module.cart_section.vector_icon.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          {% endif %}
+        </a>
+      </div>
+      {% endif %}
+      {% if module.cart_section.icon_type == 'svg' %}
+      <div class="cm_cart_wrap">
+        <span class="cart-count"></span>
+        {% set href = module.cart_section.link_field.url.href %}
+        {% if module.cart_section.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+        {% endif %}
+        <a href="{{ href }}" {% if module.cart_section.link_field.open_in_new_tab %}target="_blank"{% endif %} {% if module.cart_section.link_field.rel %}rel="{{ module.cart_section.link_field.rel }}"{% endif %}>
+          {{ module.cart_section.svg_path }}
+        </a>
+      </div>
+      {% endif %}
+
+      <div class="hamburger">
+        <li></li>
+        <li></li>
+        <li></li>
+      </div>
+
+    </div>
+
+  </div>
+</header>
+{% endif %}

@@ -1,0 +1,505 @@
+[ {
+  "id" : "e97147b3-11d3-4f5a-4ef4-3487e358bdbc",
+  "name" : "heading_type",
+  "display_width" : null,
+  "label" : "Heading type",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "1", "H1" ], [ "2", "H2" ], [ "3", "H3" ], [ "4", "H4" ], [ "5", "H5" ], [ "6", "H6" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "type" : "choice",
+  "default" : "2"
+}, {
+  "id" : "95bb14ea-3455-fddd-edbf-c28bc61d10b3",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Handmade, with an <b>Extra Pinch</b> of Love"
+}, {
+  "id" : "751e3c07-2713-6661-cdb0-c276a68f0fd1",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nascetur consectetur a pretium diam. Nisl lorem.</p>"
+}, {
+  "id" : "a1d9a7bf-b65b-dd1e-3ebc-8a9e6cc57928",
+  "name" : "apply_button",
+  "display_width" : null,
+  "label" : "Apply button",
+  "required" : false,
+  "locked" : false,
+  "display" : "checkbox",
+  "type" : "boolean",
+  "default" : true
+}, {
+  "id" : "78a28bd4-6428-ea81-8ffe-1268158e189c",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "e6eb26ae-d010-ddf4-c410-8e59bb3511d7",
+    "name" : "background_vector_color",
+    "display_width" : null,
+    "label" : "Background vector color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#000000",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "06cc277c-09a4-f5a5-add4-460a8da1d02b",
+    "name" : "background_image",
+    "display_width" : null,
+    "label" : "Background image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Background_Effect.png",
+      "alt" : "Background_Effect",
+      "loading" : "lazy",
+      "width" : 2133,
+      "height" : 1728,
+      "max_width" : 2133,
+      "max_height" : 1728
+    }
+  }, {
+    "id" : "838a5228-e25d-15aa-2fa1-b3cb0b41284e",
+    "name" : "desktop_spacing",
+    "display_width" : null,
+    "label" : "Desktop spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "af5aebe2-0697-711e-9cd1-f61c277b161d",
+    "name" : "mobile_spacing",
+    "display_width" : null,
+    "label" : "Mobile spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "fceee16e-bb5a-00bd-eb9f-3b49b8f7619e",
+    "name" : "item_background_color",
+    "display_width" : null,
+    "label" : "Item background color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "background_vector_color" : {
+      "color" : "#000000",
+      "opacity" : 100
+    },
+    "background_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Background_Effect.png",
+      "alt" : "Background_Effect",
+      "loading" : "lazy",
+      "width" : 2133,
+      "height" : 1728,
+      "max_width" : 2133,
+      "max_height" : 1728
+    },
+    "desktop_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 0,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "mobile_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "item_background_color" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "d028b233-f0b1-1a63-cc60-deb679ed2ba6",
+  "name" : "button",
+  "display_width" : null,
+  "label" : "Button",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "a1d9a7bf-b65b-dd1e-3ebc-8a9e6cc57928",
+    "controlling_field_path" : null,
+    "controlling_value_regex" : "true",
+    "property" : null,
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "children" : [ {
+    "id" : "5028fe1c-2a62-db98-c313-bd2e3f3c34ad",
+    "name" : "button_type",
+    "display_width" : null,
+    "label" : "Button type",
+    "required" : false,
+    "locked" : false,
+    "display" : "select",
+    "choices" : [ [ "std", "Standard" ], [ "cta", "CTA" ] ],
+    "multiple" : false,
+    "reordering_enabled" : true,
+    "type" : "choice",
+    "default" : "std"
+  }, {
+    "id" : "64902c32-1230-2a30-8599-2561f9346795",
+    "name" : "button_text",
+    "display_width" : null,
+    "label" : "Button text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "visibility" : {
+      "controlling_field" : "5028fe1c-2a62-db98-c313-bd2e3f3c34ad",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "std",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Check out Now"
+  }, {
+    "id" : "3d6c50d7-5e71-a41c-88bb-11a0ab916485",
+    "name" : "button_link",
+    "display_width" : null,
+    "label" : "Button link",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "5028fe1c-2a62-db98-c313-bd2e3f3c34ad",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "std",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG", "CALL_TO_ACTION" ],
+    "show_advanced_rel_options" : false,
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }, {
+    "id" : "bf96ac26-6df8-3aef-624c-641535540c02",
+    "name" : "select_cta",
+    "display_width" : null,
+    "label" : "Select CTA",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "5028fe1c-2a62-db98-c313-bd2e3f3c34ad",
+      "controlling_field_path" : null,
+      "controlling_value_regex" : "cta",
+      "property" : null,
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "type" : "cta"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "button_type" : "std",
+    "button_text" : "Check out Now",
+    "button_link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+}, {
+  "id" : "3f75ea22-ecfe-e159-0ed5-8bbf92b129fb",
+  "name" : "image_field",
+  "display_width" : null,
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "exact",
+    "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Handmade_product.png",
+    "alt" : "Handmade",
+    "loading" : "lazy",
+    "width" : 723,
+    "height" : 528
+  }
+}, {
+  "id" : "8675364e-8545-97dd-2a1c-ab22ad64d594",
+  "name" : "card_section",
+  "display_width" : null,
+  "label" : "Card section",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "b1418aaa-cb9e-fa60-80c0-03ea5b60860d",
+    "default" : 2
+  },
+  "children" : [ {
+    "id" : "4b76e066-c59a-61de-0bc6-656e62998095",
+    "name" : "icon",
+    "display_width" : null,
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "7cde56a9-c046-359c-2756-195481b36b13",
+      "name" : "icon_type",
+      "display_width" : null,
+      "label" : "Icon type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "fontawesome", "Fontawesome" ], [ "vector", "Vector Icon" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "type" : "choice",
+      "default" : "vector"
+    }, {
+      "id" : "bcbfdc3c-4caa-3cf1-6590-5ec2905c8203",
+      "name" : "icon_field",
+      "display_width" : null,
+      "label" : "Icon",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "7cde56a9-c046-359c-2756-195481b36b13",
+        "controlling_field_path" : null,
+        "controlling_value_regex" : "fontawesome",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "icon_set" : "fontawesome-5.14.0",
+      "type" : "icon",
+      "default" : {
+        "name" : "Bread Slice",
+        "unicode" : "f7ec",
+        "type" : "SOLID"
+      }
+    }, {
+      "id" : "a1b69f11-afd8-45b5-d195-4dcd59fdf2ec",
+      "name" : "vector_icon",
+      "display_width" : null,
+      "label" : "Vector icon",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "7cde56a9-c046-359c-2756-195481b36b13",
+        "controlling_field_path" : null,
+        "controlling_value_regex" : "vector",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "responsive" : false,
+      "resizable" : true,
+      "show_loading" : false,
+      "type" : "image",
+      "default" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Bread.svg",
+        "alt" : "Bread",
+        "loading" : "lazy",
+        "width" : 48,
+        "height" : 48
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "icon_type" : "vector",
+      "icon_field" : {
+        "name" : "Bread Slice",
+        "unicode" : "f7ec",
+        "type" : "SOLID"
+      },
+      "vector_icon" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Bread.svg",
+        "alt" : "Bread",
+        "loading" : "lazy",
+        "width" : 48,
+        "height" : 48
+      }
+    }
+  }, {
+    "id" : "b1418aaa-cb9e-fa60-80c0-03ea5b60860d",
+    "name" : "text_field",
+    "display_width" : null,
+    "label" : "Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Quality Baked Bread"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "icon" : {
+      "icon_type" : "vector",
+      "icon_field" : {
+        "name" : "Bread Slice",
+        "unicode" : "f7ec",
+        "type" : "SOLID"
+      },
+      "vector_icon" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Bread.svg",
+        "alt" : "Bread",
+        "loading" : "lazy",
+        "width" : 48,
+        "height" : 48
+      }
+    },
+    "text_field" : "Quality Baked Bread"
+  }, {
+    "icon" : {
+      "icon_type" : "vector",
+      "icon_field" : {
+        "name" : "Bread Slice",
+        "unicode" : "f7ec",
+        "type" : "SOLID"
+      },
+      "vector_icon" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Bread.svg",
+        "alt" : "Bread",
+        "loading" : "lazy",
+        "width" : 48,
+        "height" : 48
+      }
+    },
+    "text_field" : "Quality Baked Bread"
+  } ]
+} ]

@@ -1,0 +1,112 @@
+<div class="cm_hand_prod">
+  <div class="cm_container_wrap" style="background-image: url('{{ module.style.background_image.src }}');">
+    <div class="content-wrapper">
+      <div class="row">
+        <div class="cm_hand_prod_left">
+          {% if module.heading %}
+          <div class="cm_title">
+            <h{{ module.heading_type }}>{{ module.heading }}</h{{ module.heading_type }}>
+          </div>
+          {% endif %}
+          {% if module.content %}
+          <div class="cm_content">
+            {{ module.content }}
+          </div>
+          {% endif %}
+          {% if module.apply_button == "true" %}
+          <div class="cm_btn_wrap">
+            {% if module.button.button_type == "std" %}
+            {% set href = module.button.button_link.url.href %}
+            {% if module.button.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+            {% set href = "mailto:" + href %}
+            {% endif %}
+            <a class="hs-button" href="{{ href }}"
+               {% if module.button.button_link.open_in_new_tab %}target="_blank"{% endif %}
+               {% if module.button.button_link.rel %}rel="{{ module.button.button_link.rel }}"{% endif %}
+               >
+              {{ module.button.button_text }}
+            </a>
+            {% endif %}
+            {% if module.button.button_type == "cta" %}
+            {% cta guid="{{ module.button.select_cta }}" %}
+            {% endif %}
+          </div>
+          {% endif %}
+        </div>
+        <div class="cm_hand_prod_right">
+          {% if module.image_field.src %}
+          <div class="cm_image_wrap">
+            {% set sizeAttrs = 'width="{{ module.image_field.width }}" height="{{ module.image_field.height }}"' %}
+            {% if module.image_field.size_type == 'auto' %}
+            {% set sizeAttrs = 'width="{{ module.image_field.width }}" height="{{ module.image_field.height }}" style="max-width: 100%; height: auto;"' %}
+            {% elif module.image_field.size_type == 'auto_custom_max' %}
+            {% set sizeAttrs = 'width="{{ module.image_field.max_width }}" height="{{ module.image_field.max_height }}" style="max-width: 100%; height: auto;"' %}
+            {% endif %}
+            {% set loadingAttr = module.image_field.loading != 'disabled' ? 'loading="{{ module.image_field.loading }}"' : '' %}
+            <img src="{{ module.image_field.src }}" alt="{{ module.image_field.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          </div>
+          {% endif %}
+          <div class="cm_card_wrap">
+            {% for item in module.card_section %}
+            <div class="cm_card_item">
+              <div class="cm_icon">
+                {% if item.icon.icon_type == 'fontawesome' %}
+                <div class="cm_icon_wrap">
+                  {% icon
+              name="{{ item.icon.icon_field.name }}"
+              style="{{ item.icon.icon_field.type }}"
+              unicode="{{ item.icon.icon_field.unicode }}"
+              icon_set="{{ item.icon.icon_field.icon_set }}"
+            %}
+                </div>
+                {% endif %}
+                {% if item.icon.icon_type == 'vector' %}
+                <div class="cm_icon_wrap">
+                  {% if item.icon.vector_icon.src %}
+                  {% set sizeAttrs = 'width="{{ item.icon.vector_icon.width }}" height="{{ item.icon.vector_icon.height }}"' %}
+                  {% if item.icon.vector_icon.size_type == 'auto' %}
+                  {% set sizeAttrs = 'width="{{ item.icon.vector_icon.width }}" height="{{ item.icon.vector_icon.height }}" style="max-width: 100%; height: auto;"' %}
+                  {% elif item.icon.vector_icon.size_type == 'auto_custom_max' %}
+                  {% set sizeAttrs = 'width="{{ item.icon.vector_icon.max_width }}" height="{{ item.icon.vector_icon.max_height }}" style="max-width: 100%; height: auto;"' %}
+                  {% endif %}
+                  {% set loadingAttr = item.icon.vector_icon.loading != 'disabled' ? 'loading="{{ item.icon.vector_icon.loading }}"' : '' %}
+                  <img src="{{ item.icon.vector_icon.src }}" alt="{{ item.icon.vector_icon.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                  {% endif %}
+                </div>
+                {% endif %}
+              </div>
+              <div class="cm_text">
+                {{ item.text_field }}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% require_css %}
+<style>
+  .cm_hand_prod {
+    {{ module.style.desktop_spacing.css }}
+  }
+  .cm_hand_prod .cm_hand_prod_right:before,
+  .cm_hand_prod .cm_hand_prod_right:after,
+  .cm_hand_prod .cm_hand_prod_right .cm_image_wrap:before,
+  .cm_hand_prod .cm_hand_prod_right .cm_image_wrap:after {
+    background-color: rgba({{ module.style.background_vector_color.color|convert_rgb  }},{{ module.style.background_vector_color.opacity/100 }});
+  }
+  .cm_hand_prod .cm_card_wrap .cm_card_item {
+    background: rgba({{ module.style.item_background_color.color|convert_rgb  }},{{ module.style.item_background_color.opacity/100 }});
+  }
+
+  @media (max-width: 767px) {
+    .cm_hand_prod {
+      {{ module.style.mobile_spacing.css }}
+    }
+  }
+</style>
+{% end_require_css %}

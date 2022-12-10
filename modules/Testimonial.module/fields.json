@@ -1,0 +1,143 @@
+[ {
+  "id" : "6b3899e1-65b0-8c56-bdb5-8798575fd281",
+  "name" : "title",
+  "display_width" : null,
+  "label" : "Name",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Stefan Lynton"
+}, {
+  "id" : "e6b96a0a-2092-f332-5681-a2d85055127c",
+  "name" : "designation",
+  "display_width" : null,
+  "label" : "Designation",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Culture Strategist"
+}, {
+  "id" : "1750bd8e-a5d2-ea29-c994-e28b07f456b4",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "b8c245a9-dc98-a77b-9aa4-819d86766ece",
+    "name" : "desktop_spacing",
+    "display_width" : null,
+    "label" : "Desktop Spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : null,
+          "units" : null
+        },
+        "bottom" : {
+          "value" : 65,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "92f7112d-6640-9d44-d891-5c912cd45174",
+    "name" : "mobile_spacing",
+    "display_width" : null,
+    "label" : "Mobile Spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : null,
+          "units" : null
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "desktop_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : null,
+          "units" : null
+        },
+        "bottom" : {
+          "value" : 65,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "mobile_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : null,
+          "units" : null
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }
+}, {
+  "id" : "e7832dab-fbb1-025b-fd3c-993f6e75fff7",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<h6>\"The real competitive advantage in any business is one word only, which is ’people’ \"</h6>"
+} ]

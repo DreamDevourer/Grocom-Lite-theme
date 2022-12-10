@@ -1,0 +1,15 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_19_95" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="1" y="5" width="45" height="37">
+<path d="M3.99951 32.083C3.99951 30.881 4.26551 29.688 4.97051 28.715C7.04451 25.85 12.6705 20 23.9995 20C35.3295 20 40.9545 25.851 43.0285 28.715C43.7335 29.688 43.9995 30.881 43.9995 32.083C43.9995 34.1827 43.1654 36.1964 41.6807 37.6812C40.1959 39.1659 38.1822 40 36.0825 40H11.9165C9.81679 40 7.80307 39.1659 6.31835 37.6812C4.83362 36.1964 3.99951 34.1827 3.99951 32.083Z" fill="white" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M11.9995 9V13" stroke="white" stroke-width="4" stroke-linecap="round"/>
+<path d="M13.9995 22V26" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path d="M35.9995 9V13" stroke="white" stroke-width="4" stroke-linecap="round"/>
+<path d="M33.9995 22V26" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path d="M23.9995 7V13" stroke="white" stroke-width="4" stroke-linecap="round"/>
+<path d="M23.9995 20V28" stroke="black" stroke-width="4" stroke-linecap="round"/>
+<path d="M39.9995 25.443C36.9055 22.78 31.8075 20 23.9995 20C16.1915 20 11.0935 22.779 7.99951 25.443" stroke="white" stroke-width="4" stroke-linecap="round"/>
+</mask>
+<g mask="url(#mask0_19_95)">
+<path d="M-0.000488281 0H47.9995V48H-0.000488281V0Z" fill="#4AB148"/>
+</g>
+</svg>

@@ -1,0 +1,336 @@
+[ {
+  "id" : "513dc630-c516-a8e4-9762-12d21a0fc882",
+  "name" : "heading_type",
+  "display_width" : null,
+  "label" : "Heading type",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "1", "H1" ], [ "2", "H2" ], [ "3", "H3" ], [ "4", "H4" ], [ "5", "H5" ], [ "6", "H6" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "type" : "choice",
+  "default" : "3"
+}, {
+  "id" : "8401fcdc-6c90-95aa-f1fc-e5e88b0d842e",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Choose <b>Your</b> Groceries"
+}, {
+  "id" : "4d3e21be-cb3c-f4cb-902b-5683dc2dcae8",
+  "name" : "content",
+  "display_width" : null,
+  "label" : "Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nascetur.</p>"
+}, {
+  "id" : "2529c09d-7edc-9709-c61d-4fb50c584d87",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "d992c9b3-2a20-9329-be82-52d7fe577243",
+    "name" : "desktop_spacing",
+    "display_width" : null,
+    "label" : "Desktop spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "f8aeaa8a-1292-82f6-419f-d5aba628b3dd",
+    "name" : "mobile_spacing",
+    "display_width" : null,
+    "label" : "Mobile spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "desktop_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "mobile_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }
+}, {
+  "id" : "139d3ba2-6971-04a4-1f52-bd71ac79602a",
+  "name" : "add_product",
+  "display_width" : null,
+  "label" : "Add product",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "5efc8ded-8d2d-c2a0-5b02-50d66971aba7",
+    "default" : 9
+  },
+  "children" : [ {
+    "id" : "bfedc830-4d96-9155-e1df-ba18d9dd4211",
+    "name" : "image_field",
+    "display_width" : null,
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Grocery_item_1.jpeg",
+      "alt" : "Grocery_item_1",
+      "loading" : "lazy",
+      "width" : 320,
+      "height" : 480,
+      "max_width" : 320,
+      "max_height" : 480
+    }
+  }, {
+    "id" : "5efc8ded-8d2d-c2a0-5b02-50d66971aba7",
+    "name" : "title",
+    "display_width" : null,
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Cabbage"
+  }, {
+    "id" : "650b122d-5f33-7681-b08a-c0f2c6fd7aa2",
+    "name" : "price_in_",
+    "display_width" : null,
+    "label" : "Price (in $)",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "6.79"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Grocery_item_1.jpeg",
+      "alt" : "Grocery_item_1",
+      "loading" : "lazy",
+      "width" : 320,
+      "height" : 480,
+      "max_width" : 320,
+      "max_height" : 480
+    },
+    "title" : "Cabbage",
+    "price_in_" : "6.79"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Grocery_item_1.jpeg",
+      "alt" : "Grocery_item_1",
+      "loading" : "lazy",
+      "width" : 320,
+      "height" : 480,
+      "max_width" : 320,
+      "max_height" : 480
+    },
+    "title" : "Cabbage",
+    "price_in_" : "6.79"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Grocery_item_1.jpeg",
+      "alt" : "Grocery_item_1",
+      "loading" : "lazy",
+      "width" : 320,
+      "height" : 480,
+      "max_width" : 320,
+      "max_height" : 480
+    },
+    "title" : "Cabbage",
+    "price_in_" : "6.79"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Grocery_item_1.jpeg",
+      "alt" : "Grocery_item_1",
+      "loading" : "lazy",
+      "width" : 320,
+      "height" : 480,
+      "max_width" : 320,
+      "max_height" : 480
+    },
+    "title" : "Cabbage",
+    "price_in_" : "6.79"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Grocery_item_1.jpeg",
+      "alt" : "Grocery_item_1",
+      "loading" : "lazy",
+      "width" : 320,
+      "height" : 480,
+      "max_width" : 320,
+      "max_height" : 480
+    },
+    "title" : "Cabbage",
+    "price_in_" : "6.79"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Grocery_item_1.jpeg",
+      "alt" : "Grocery_item_1",
+      "loading" : "lazy",
+      "width" : 320,
+      "height" : 480,
+      "max_width" : 320,
+      "max_height" : 480
+    },
+    "title" : "Cabbage",
+    "price_in_" : "6.79"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Grocery_item_1.jpeg",
+      "alt" : "Grocery_item_1",
+      "loading" : "lazy",
+      "width" : 320,
+      "height" : 480,
+      "max_width" : 320,
+      "max_height" : 480
+    },
+    "title" : "Cabbage",
+    "price_in_" : "6.79"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Grocery_item_1.jpeg",
+      "alt" : "Grocery_item_1",
+      "loading" : "lazy",
+      "width" : 320,
+      "height" : 480,
+      "max_width" : 320,
+      "max_height" : 480
+    },
+    "title" : "Cabbage",
+    "price_in_" : "6.79"
+  }, {
+    "image_field" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Grocery_item_1.jpeg",
+      "alt" : "Grocery_item_1",
+      "loading" : "lazy",
+      "width" : 320,
+      "height" : 480,
+      "max_width" : 320,
+      "max_height" : 480
+    },
+    "title" : "Cabbage",
+    "price_in_" : "6.79"
+  } ]
+}, {
+  "id" : "2adb1421-cdd6-4650-74d7-43c963268e37",
+  "name" : "button_text",
+  "display_width" : null,
+  "label" : "Button text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Load More"
+} ]

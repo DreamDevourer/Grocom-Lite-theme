@@ -1,0 +1,115 @@
+<!--
+templateType: blog_post
+isAvailableForNewContent: true
+label: Blog Article
+screenshotPath: ../images/template-previews/blog-article.png
+-->
+{% extends './layouts/base.html' %}
+
+{% block template_stylesheets %}
+<link type="text/css" rel="stylesheet" href="{{ get_asset_url('../css/templates/_blog.css') }}">
+{% endblock template_stylesheets %}
+
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  <div class="post_grp">
+
+    <div class="post_banner">
+      <div class="content-wrapper">
+        <div class="post_title">
+          <p class="pst_date">{{ content.publish_date_local_time.strftime('%b %e %Y') }}</p>
+          <h1 class="pst_title">{{ content.name }}</h1> 
+          <div class="pst_ban_icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="104" height="104" viewBox="0 0 104 104" fill="none">
+              <g clip-path="url(#clip0_33_248)">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M56.1408 47.8701C55.8973 45.8127 55.3617 44.1964 54.8704 42.9797C50.1262 31.3624 38.1467 30.4114 27.4712 32.967C24.6105 33.6502 20.456 35.6648 18.0767 38.4947C16.4041 40.4824 15.5904 42.8606 16.5444 45.4599C17.5739 48.2975 20.3846 50.2605 23.8166 51.5136C28.7789 53.3299 35.0323 53.6812 38.6286 53.3251C42.7766 52.9132 49.1056 51.5875 55.101 49.4905C55.189 51.7303 54.917 54.4227 53.9258 57.6124C53.4904 59.0317 52.6275 60.5283 51.5029 61.9805C49.1509 60.4675 46.3947 59.352 43.3012 58.7498C40.7002 58.2472 35.042 58.217 30.8579 59.6209C27.8721 60.6253 25.6499 62.3715 25.4793 65.0456C25.2722 68.3668 27.1233 70.282 29.7603 71.2556C33.4726 72.6284 38.7942 72.0543 41.5677 71.0692C44.7939 69.9215 48.8303 66.9278 51.7114 63.5468C59.3897 69.0775 62.0138 79.2822 56.9217 88.6679C56.7732 88.9487 56.8789 89.3039 57.1564 89.4617C57.4432 89.6142 57.803 89.5058 57.9515 89.225C63.3373 79.2934 60.5772 68.4874 52.4592 62.6256C53.6525 61.0771 54.5784 59.4745 55.0449 57.9584C56.1344 54.444 56.3967 51.4981 56.2534 49.0766C57.3698 48.6646 58.4701 48.2246 59.5412 47.7555C64.3524 45.6518 68.4715 42.995 70.4181 39.9323C74.9177 32.8557 72.8647 25.168 67.8935 19.3768C62.9678 13.6428 55.192 9.79381 48.2677 10.2604C47.9449 10.2824 47.6975 10.5639 47.7214 10.8851C47.7453 11.2063 48.0234 11.4512 48.3461 11.4291C54.9354 10.9849 62.3239 14.6795 67.0044 20.1394C71.6395 25.5423 73.625 32.7042 69.4331 39.3021C67.5742 42.2155 63.6439 44.6829 59.0711 46.6831C58.1189 47.0997 57.1411 47.4937 56.1408 47.8701ZM50.7545 62.9009C48.5426 61.5015 45.9674 60.4626 43.0724 59.9028C40.5967 59.4239 35.2222 59.39 31.2268 60.7332C28.7503 61.5655 26.7873 62.8998 26.6512 65.1172C26.4762 67.8269 28.0214 69.3626 30.1693 70.1563C33.6203 71.4423 38.5906 70.8837 41.1782 69.9642C44.2095 68.8879 48.0287 66.0774 50.7545 62.9009ZM55.0115 48.2811C54.794 46.2258 54.2657 44.6222 53.7847 43.4233C49.2884 32.4075 37.863 31.6844 27.7437 34.1059C25.0788 34.7411 21.1979 36.6055 18.972 39.2489C17.5807 40.9065 16.8476 42.8862 17.643 45.0601C18.5646 47.6032 21.142 49.2914 24.2141 50.4161C29.0032 52.169 35.0467 52.501 38.5145 52.1591C42.6626 51.7474 49.0216 50.4092 55.0115 48.2811Z" fill="white"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M57.6419 88.4495C57.5495 87.8592 57.2775 86.1614 57.2294 85.9059C57.09 85.1911 56.9193 84.8524 56.707 84.5277C56.5329 84.2691 56.3172 84.0246 56.0525 83.5016C55.9097 83.2113 55.5489 83.1028 55.2613 83.2502C54.9736 83.3976 54.8655 83.7483 55.0082 84.0386C55.2548 84.5088 55.4512 84.7843 55.6266 85.0235C55.8246 85.3018 55.9662 85.5256 56.0791 86.1301C56.1368 86.4236 56.2798 88.0916 56.498 88.8354C56.6105 89.2239 56.8044 89.4523 56.9342 89.5265C57.1199 89.633 57.3749 89.6871 57.6955 89.6398C58.1068 89.5776 58.71 89.3312 59.3919 89.0704C60.0322 88.8238 60.7616 88.5592 61.4824 88.4735C62.0891 88.4053 62.6849 88.4688 63.1836 88.8592C63.4362 89.06 63.7994 89.0219 64.0011 88.7687C64.2028 88.5156 64.1627 88.1449 63.9101 87.9441C63.1675 87.3466 62.2669 87.2068 61.3463 87.3122C60.531 87.4064 59.7032 87.6943 58.972 87.9773C58.5342 88.1443 58.1329 88.3101 57.8059 88.4108C57.7533 88.4274 57.6976 88.4385 57.6419 88.4495Z" fill="white"/>
+              </g>
+              <defs>
+                <clipPath id="clip0_33_248">
+                  <rect width="76.1173" height="76.1173" fill="white" transform="translate(0 38.0586) rotate(-30)"/>
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="content-wrapper">
+
+      <div class="pst_ftr_img">
+        {% if content.featured_image %}
+        <img src="{{content.featured_image}}" alt="{{ page_meta.name }}">
+        {% endif %}
+      </div>
+      
+    </div>
+      
+    {% module "testimonial" path="../modules/Testimonial", label="Testimonial" %}
+
+    <div class="content-wrapper">    
+      <div class="pst_cont">
+        {{ content.post_body }}
+      </div>
+      <div class="pst_tags_wrap">
+        <P class="psted_date">Posted on {{ content.publish_date_local_time.strftime('%b %e, %Y') }}</P>
+        <div class="pst_tags">
+          {% for tag in content.tag_list %}
+          <a class="pst_tag" href="{{ blog_tag_url(group.id, tag.slug) }}" rel="tag">{{ tag.name }}</a>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="pst_athr">
+        {% if content.blog_post_author.avatar %}
+        <div class="pst_athr_img">
+          <img src="{{ content.blog_post_author.avatar }}" alt="{{ content.blog_post_author.display_name }}">
+        </div>
+        {% endif %}
+        <div class="pst_athr_cont">
+          {% if content.blog_post_author.display_name %}<h6>Hey there, I’m <b>{{ content.blog_post_author.display_name }}</b></h6>{% endif %}
+          <p>{{ content.blog_post_author.bio }}</p>
+          <div class="pst_athr_social">
+            <ul>
+              {# {% if content.blog_post_author.facebook %} #}
+              <li>
+                <a href="{{ content.blog_post_author.facebook }}" target="_blank" class="hs-author-social-link hs-social-facebook">
+                  <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true"><g id="Facebook Square1_layer"><path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"></path></g></svg>
+                </a>
+              </li>
+              {# {% endif %} #}
+              {# {% if content.blog_post_author.twitter %} #}
+              <li>
+                <a href="{{ content.blog_post_author.twitter }}" target="_blank" class="hs-author-social-link hs-social-twitter">
+                  <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true">
+                    <g id="Twitter Square5_layer">
+                      <path d="M400 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm-48.9 158.8c.2 2.8.2 5.7.2 8.5 0 86.7-66 186.6-186.6 186.6-37.2 0-71.7-10.8-100.7-29.4 5.3.6 10.4.8 15.8.8 30.7 0 58.9-10.4 81.4-28-28.8-.6-53-19.5-61.3-45.5 10.1 1.5 19.2 1.5 29.6-1.2-30-6.1-52.5-32.5-52.5-64.4v-.8c8.7 4.9 18.9 7.9 29.6 8.3a65.447 65.447 0 0 1-29.2-54.6c0-12.2 3.2-23.4 8.9-33.1 32.3 39.8 80.8 65.8 135.2 68.6-9.3-44.5 24-80.6 64-80.6 18.9 0 35.9 7.9 47.9 20.7 14.8-2.8 29-8.3 41.6-15.8-4.9 15.2-15.2 28-28.8 36.1 13.2-1.4 26-5.1 37.8-10.2-8.9 13.1-20.1 24.7-32.9 34z"></path>
+                    </g>
+           </svg>
+                </a>
+              </li>
+              {# {% endif %} #}
+              {# {% if content.blog_post_author.linkedin %} #}
+              <li>
+                <a href="{{ content.blog_post_author.linkedin }}" target="_blank" class="hs-author-social-link hs-social-linkedin">
+                  <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" aria-hidden="true"><g id="LinkedIn3_layer"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></g></svg>
+                </a>
+              </li>
+              {# {% endif %} #}
+            </ul>
+          </div>
+        </div>
+      </div>
+      {% if group.allow_comments %}
+      <div class="blog-comments">
+        {% module 'blog_comments'
+            path='@hubspot/blog_comments',
+            label="Blog comments"
+          %}
+      </div>
+      {% endif %}
+    </div>
+  </div>
+
+</main>
+{% endblock body %}

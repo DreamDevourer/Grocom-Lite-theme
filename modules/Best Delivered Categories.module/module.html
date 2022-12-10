@@ -1,0 +1,100 @@
+<div class="cm_best_deliv_cat">
+  <div class="content-wrapper">
+    <div class="row">
+      {% if module.heading || module.content %}
+      <div class="cm_top_sec">
+        {% if module.heading %}
+        <div class="cm_title">
+          <h{{ module.heading_type }}>{{ module.heading }}</h{{ module.heading_type }}>
+        </div>
+        {% endif %}
+        {% if module.content %}
+        <div class="cm_content">
+          {{ module.content }}
+        </div>
+        {% endif %}
+      </div>
+      {% endif %}
+      <div class="cm_bottom_sec">
+        <div class="cm_category_slider">
+          {% for item in module.categories_item %}
+          <div class="cm_category_slider_item">
+            <div class="cm_category_slider_item_inner">
+              <div class="cm_img" style="background-image: url('{{ item.shape_image.src }}');">
+                {% if item.image_field.src %}
+                {% set sizeAttrs = 'width="{{ item.image_field.width }}" height="{{ item.image_field.height }}"' %}
+                {% if item.image_field.size_type == 'auto' %}
+                {% set sizeAttrs = 'width="{{ item.image_field.width }}" height="{{ item.image_field.height }}" style="max-width: 100%; height: auto;"' %}
+                {% elif item.image_field.size_type == 'auto_custom_max' %}
+                {% set sizeAttrs = 'width="{{ item.image_field.max_width }}" height="{{ item.image_field.max_height }}" style="max-width: 100%; height: auto;"' %}
+                {% endif %}
+                {% set loadingAttr = item.image_field.loading != 'disabled' ? 'loading="{{ item.image_field.loading }}"' : '' %}
+                <img src="{{ item.image_field.src }}" alt="{{ item.image_field.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+                {% endif %}
+              </div>
+              <div class="cm_category">
+                <h6>{{ item.category }}</h6>
+                {% set href = item.link_field.url.href %}
+                {% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+                {% set href = "mailto:" + href %}
+                {% endif %}
+                <a class="t_color" href="{{ href }}"
+                   {% if item.link_field.open_in_new_tab %}target="_blank"{% endif %}
+                   {% if item.link_field.rel %}rel="{{ item.link_field.rel }}"{% endif %}
+                   >
+                  {{ item.link_text }}
+                </a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<style>
+  .cm_best_deliv_cat {
+    {{ module.style.desktop_spacing.css }}
+  }
+
+  @media (max-width: 767px) {
+    .cm_best_deliv_cat {
+      {{ module.style.mobile_spacing.css }}
+    }
+  }
+</style>
+
+{% require_js %}
+<script>
+  $('.cm_category_slider').slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false,
+    {% if module.style.slider_setting.autoplay %}
+    autoplay: true,
+    {% else %}
+    autoplay: false,
+    {% endif %}
+    autoplaySpeed: {{ module.style.slider_setting.autoplay_speed }},
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2
+        }
+      },
+      {
+        breakpoint: 479,
+        settings: {
+          slidesToShow: 1
+        }
+      }
+    ]
+  });
+</script>
+{% end_require_js %}

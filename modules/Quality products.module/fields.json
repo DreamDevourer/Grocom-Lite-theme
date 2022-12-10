@@ -1,0 +1,391 @@
+[ {
+  "id" : "a16af739-929a-1aa0-2ec1-a36b193a8008",
+  "name" : "style",
+  "display_width" : null,
+  "label" : "Style",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "ebffe55e-0567-ce07-934c-8b01ee9c794e",
+    "name" : "heading_color",
+    "display_width" : null,
+    "label" : "Heading color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "96d4d025-9ded-33a0-b7aa-6737dd194228",
+    "name" : "background_color",
+    "display_width" : null,
+    "label" : "Background color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#000000",
+      "opacity" : 100
+    }
+  }, {
+    "id" : "8f0c3f35-d143-7842-3944-64b485da7cd7",
+    "name" : "background_image",
+    "display_width" : null,
+    "label" : "Background image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Leaf.png",
+      "alt" : "Leaf",
+      "loading" : "lazy",
+      "width" : 331,
+      "height" : 329,
+      "max_width" : 331,
+      "max_height" : 329
+    }
+  }, {
+    "id" : "4b97260b-e1b6-acb9-31f1-c7a71df63ab6",
+    "name" : "desktop_spacing",
+    "display_width" : null,
+    "label" : "Desktop spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "aedb4312-3e63-c7b3-b91f-a3b088cf38af",
+    "name" : "mobile_spacing",
+    "display_width" : null,
+    "label" : "Mobile spacing",
+    "required" : false,
+    "locked" : false,
+    "type" : "spacing",
+    "default" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    }
+  }, {
+    "id" : "7e4b2de0-8797-a084-cc3e-cb2645ab3784",
+    "name" : "item_background_color",
+    "display_width" : null,
+    "label" : "Item background color",
+    "required" : false,
+    "locked" : false,
+    "type" : "color",
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  } ],
+  "tab" : "STYLE",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "heading_color" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    },
+    "background_color" : {
+      "color" : "#000000",
+      "opacity" : 100
+    },
+    "background_image" : {
+      "size_type" : "auto",
+      "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Leaf.png",
+      "alt" : "Leaf",
+      "loading" : "lazy",
+      "width" : 331,
+      "height" : 329,
+      "max_width" : 331,
+      "max_height" : 329
+    },
+    "desktop_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "mobile_spacing" : {
+      "padding" : {
+        "top" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "bottom" : {
+          "value" : 50,
+          "units" : "px"
+        },
+        "left" : {
+          "value" : null,
+          "units" : null
+        },
+        "right" : {
+          "value" : null,
+          "units" : null
+        }
+      }
+    },
+    "item_background_color" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    }
+  }
+}, {
+  "id" : "4cabad9b-7425-5528-9982-86841af5913c",
+  "name" : "heading_type",
+  "display_width" : null,
+  "label" : "Heading type",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "1", "H1" ], [ "2", "H2" ], [ "3", "H3" ], [ "4", "H4" ], [ "5", "H5" ], [ "6", "H6" ] ],
+  "multiple" : false,
+  "reordering_enabled" : true,
+  "type" : "choice",
+  "default" : "3"
+}, {
+  "id" : "87c85ff1-5838-c50c-235f-3d84dec80e7a",
+  "name" : "heading",
+  "display_width" : null,
+  "label" : "Heading",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Understand How We Deliver <b>Quality Products</b> to You"
+}, {
+  "id" : "870c9bf5-a457-25f5-8a63-52a0eea9dc89",
+  "name" : "quality_products_item",
+  "display_width" : null,
+  "label" : "Quality process item",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : "a6b1a18d-df6a-5445-f3c5-b5a47a8d3304",
+    "default" : 2
+  },
+  "children" : [ {
+    "id" : "2b6dbb7f-c11a-24d3-d0e0-c62bf6616a57",
+    "name" : "icon",
+    "display_width" : null,
+    "label" : "Icon",
+    "required" : false,
+    "locked" : false,
+    "children" : [ {
+      "id" : "dca2cffb-674b-a1a2-fe4c-178ba1d42dcf",
+      "name" : "icon_type",
+      "display_width" : null,
+      "label" : "Icon type",
+      "required" : false,
+      "locked" : false,
+      "display" : "select",
+      "choices" : [ [ "fontawesome", "Fontawesome" ], [ "vector", "Vector Icon" ] ],
+      "multiple" : false,
+      "reordering_enabled" : true,
+      "type" : "choice",
+      "default" : "vector"
+    }, {
+      "id" : "6dd9d554-6c8b-8bf4-c185-e5380bf061b6",
+      "name" : "icon_field",
+      "display_width" : null,
+      "label" : "Icon",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "dca2cffb-674b-a1a2-fe4c-178ba1d42dcf",
+        "controlling_field_path" : null,
+        "controlling_value_regex" : "fontawesome",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "icon_set" : "fontawesome-5.14.0",
+      "type" : "icon",
+      "default" : {
+        "name" : "Briefcase",
+        "unicode" : "f0b1",
+        "type" : "SOLID"
+      }
+    }, {
+      "id" : "4235d64c-3377-645a-77b1-b84052365be3",
+      "name" : "vector_icon",
+      "display_width" : null,
+      "label" : "Vector icon",
+      "required" : false,
+      "locked" : false,
+      "visibility" : {
+        "controlling_field" : "dca2cffb-674b-a1a2-fe4c-178ba1d42dcf",
+        "controlling_field_path" : null,
+        "controlling_value_regex" : "vector",
+        "property" : null,
+        "operator" : "EQUAL",
+        "access" : null,
+        "hidden_subfields" : null
+      },
+      "responsive" : false,
+      "resizable" : true,
+      "show_loading" : false,
+      "type" : "image",
+      "default" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Bag.svg",
+        "alt" : "Bag",
+        "loading" : "lazy",
+        "width" : 28,
+        "height" : 26
+      }
+    } ],
+    "tab" : "CONTENT",
+    "expanded" : false,
+    "type" : "group",
+    "default" : {
+      "icon_type" : "vector",
+      "icon_field" : {
+        "name" : "Briefcase",
+        "unicode" : "f0b1",
+        "type" : "SOLID"
+      },
+      "vector_icon" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Bag.svg",
+        "alt" : "Bag",
+        "loading" : "lazy",
+        "width" : 28,
+        "height" : 26
+      }
+    }
+  }, {
+    "id" : "a6b1a18d-df6a-5445-f3c5-b5a47a8d3304",
+    "name" : "content",
+    "display_width" : null,
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+  }, {
+    "id" : "a277e2a1-0656-8f9f-69f9-60487525cc37",
+    "name" : "product_process",
+    "display_width" : null,
+    "label" : "Product process",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : 3
+    },
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : [ "Lorem ipsum dolor sit", "Lorem ipsum dolor sit", "Lorem ipsum dolor sit" ]
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : [ {
+    "icon" : {
+      "icon_type" : "vector",
+      "icon_field" : {
+        "name" : "Briefcase",
+        "unicode" : "f0b1",
+        "type" : "SOLID"
+      },
+      "vector_icon" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Bag.svg",
+        "alt" : "Bag",
+        "loading" : "lazy",
+        "width" : 28,
+        "height" : 26
+      }
+    },
+    "content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "product_process" : [ "Lorem ipsum dolor sit", "Lorem ipsum dolor sit", "Lorem ipsum dolor sit" ]
+  }, {
+    "icon" : {
+      "icon_type" : "vector",
+      "icon_field" : {
+        "name" : "Briefcase",
+        "unicode" : "f0b1",
+        "type" : "SOLID"
+      },
+      "vector_icon" : {
+        "size_type" : "exact",
+        "src" : "https://www.remotish.agency/hubfs/Grocom_Lite_Theme/images/Bag.svg",
+        "alt" : "Bag",
+        "loading" : "lazy",
+        "width" : 28,
+        "height" : 26
+      }
+    },
+    "content" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "product_process" : [ "Lorem ipsum dolor sit", "Lorem ipsum dolor sit", "Lorem ipsum dolor sit" ]
+  } ]
+} ]

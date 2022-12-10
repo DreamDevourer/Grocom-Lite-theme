@@ -1,0 +1,12 @@
+.blog-pagination {
+  margin-top: 50px;
+  text-align: center;
+}
+.blog-pagination .blog-pagination__link {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 5px;
+}
+.blog-pagination .blog-pagination__link svg {
+  margin: 0 5px;
+}

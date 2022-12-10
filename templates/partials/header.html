@@ -1,0 +1,16 @@
+<!--
+templateType: global_partial
+isAvailableForNewContent: false
+label: Website Header
+-->
+
+{# Top header drag and drop area #}
+{% dnd_area "top_header" label="Top header", class="top_header" %}
+{% end_dnd_area %}
+
+{# Main header #}
+{% module "header" path="../../modules/Header", label="Header" %}
+
+{# Bottom header drag and drop area #}
+{% dnd_area "bottom_header" label="Bottom header", class="bottom_header" %}
+{% end_dnd_area %}

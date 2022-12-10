@@ -1,0 +1,80 @@
+<div class="cstmban_wrapper {{ name }}">
+  <div class="content-wrapper">
+    {% if module.heading %}
+    <div class="cstmban_main_title">
+      <div class="cm_title">
+        <h{{ module.heading_type }}>{{ module.heading }}</h{{ module.heading_type }}>
+      </div>
+    </div>
+    {% endif %}
+
+    <div class="cstmban_card_wrap">
+      <div class="cstmban_card">  
+        <div class="cstmban_col cstmban_img">
+          {% if module.card.image_field.src %}
+          {% set sizeAttrs = 'width="{{ module.card.image_field.width }}" height="{{ module.card.image_field.height }}"' %}
+          {% if module.card.image_field.size_type == 'auto' %}
+          {% set sizeAttrs = 'width="{{ module.card.image_field.width }}" height="{{ module.card.image_field.height }}" style="max-width: 100%; height: auto;"' %}
+          {% elif module.card.image_field.size_type == 'auto_custom_max' %}
+          {% set sizeAttrs = 'width="{{ module.card.image_field.max_width }}" height="{{ module.card.image_field.max_height }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+          {% set loadingAttr = module.card.image_field.loading != 'disabled' ? 'loading="{{ module.card.image_field.loading }}"' : '' %}
+          <img src="{{ module.card.image_field.src }}" alt="{{ module.card.image_field.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          {% endif %}
+        </div>
+        <div class="cstmban_col cstmban_cont">    
+          <div class="cstmban_icon"><svg xmlns="http://www.w3.org/2000/svg" width="142" height="142" viewBox="0 0 142 142" fill="none">
+            <g clip-path="url(#clip0_45_554)">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M76.2813 65.0368C79.0784 65.3679 81.2758 66.0961 82.93 66.764C98.7242 73.2139 100.017 89.5005 96.5427 104.014C95.6139 107.904 92.8749 113.552 89.0276 116.786C86.3252 119.061 83.092 120.167 79.558 118.87C75.7002 117.47 73.0315 113.649 71.3279 108.983C68.8584 102.236 68.3809 93.7347 68.865 88.8454C69.425 83.206 71.2273 74.6015 74.0783 66.4505C71.0333 66.3309 67.3728 66.7006 63.0363 68.0482C61.1067 68.6402 59.072 69.8133 57.0977 71.3423C59.1546 74.54 60.6712 78.2871 61.4899 82.4928C62.1732 86.029 62.2142 93.7215 60.3057 99.4099C58.9401 103.469 56.566 106.49 52.9305 106.722C48.4152 107.004 45.8114 104.487 44.4877 100.902C42.6214 95.8552 43.402 88.6202 44.7411 84.8496C46.3015 80.4635 50.3715 74.9757 54.9682 71.0588C47.449 60.6199 33.5753 57.0523 20.815 63.9753C20.4333 64.1771 19.9504 64.0334 19.7358 63.6562C19.5285 63.2662 19.6758 62.777 20.0576 62.5751C33.5601 55.253 48.2513 59.0054 56.2207 70.0422C58.3259 68.4199 60.5047 67.161 62.5659 66.5268C67.3438 65.0455 71.3488 64.689 74.641 64.8837C75.2011 63.3659 75.7994 61.8701 76.4371 60.4139C79.2972 53.8729 82.9093 48.2728 87.073 45.6262C96.694 39.509 107.146 42.3001 115.019 49.0585C122.815 55.7552 128.048 66.3268 127.413 75.7407C127.383 76.1795 127.001 76.5159 126.564 76.4834C126.127 76.4508 125.794 76.0728 125.824 75.6341C126.428 66.6757 121.405 56.6307 113.982 50.2674C106.637 43.9657 96.9 41.2663 87.9298 46.9655C83.9689 49.4927 80.6145 54.8361 77.8951 61.053C77.3287 62.3476 76.793 63.6769 76.2813 65.0368ZM55.8463 72.3597C57.7488 75.3669 59.1613 78.868 59.9223 82.8039C60.5734 86.1696 60.6196 93.4765 58.7934 98.9085C57.6618 102.275 55.8478 104.944 52.8331 105.129C49.1492 105.367 47.0614 103.266 45.9824 100.346C44.234 95.6545 44.9934 88.8971 46.2435 85.3791C47.7068 81.2579 51.5277 76.0656 55.8463 72.3597ZM75.7225 66.5722C78.5168 66.868 80.697 67.5861 82.327 68.2401C97.3034 74.353 98.2865 89.8863 94.9942 103.644C94.1307 107.267 91.5959 112.543 88.0021 115.569C85.7487 117.461 83.0571 118.458 80.1016 117.376C76.6442 116.123 74.349 112.619 72.8199 108.442C70.4368 101.932 69.9854 93.7151 70.4502 89.0005C71.01 83.361 72.8293 74.7157 75.7225 66.5722Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M21.1121 62.9961C21.9146 63.1216 24.2229 63.4915 24.5703 63.557C25.542 63.7464 26.0026 63.9785 26.444 64.2671C26.7955 64.5038 27.1279 64.7971 27.839 65.157C28.2337 65.351 28.3812 65.8416 28.1807 66.2327C27.9803 66.6237 27.5035 66.7707 27.1088 66.5766C26.4697 66.2414 26.0951 65.9744 25.7699 65.736C25.3915 65.4668 25.0872 65.2743 24.2654 65.1207C23.8664 65.0424 21.5986 64.848 20.5875 64.5513C20.0593 64.3984 19.7487 64.1346 19.6479 63.9582C19.5031 63.7057 19.4296 63.3591 19.4938 62.9232C19.5785 62.364 19.9134 61.5439 20.2679 60.6169C20.6033 59.7464 20.9629 58.7548 21.0794 57.7748C21.1722 56.95 21.0858 56.1399 20.555 55.4619C20.282 55.1184 20.334 54.6248 20.6781 54.3505C21.0223 54.0763 21.5262 54.1308 21.7992 54.4742C22.6116 55.4838 22.8016 56.7082 22.6583 57.9599C22.5302 59.0683 22.1389 60.1937 21.7541 61.1878C21.527 61.783 21.3016 62.3285 21.1648 62.7732C21.1421 62.8446 21.1271 62.9204 21.1121 62.9961Z" fill="white"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_45_554">
+                <rect width="103.485" height="103.485" fill="white" transform="matrix(0.5 -0.866025 -0.866025 -0.5 89.6204 141.363)"/>
+              </clipPath>
+            </defs>
+            </svg></div>
+          <div class="cstmban_cont_innr">
+            {% if module.card.heading %}
+            <div class="cstmban_title_wrap">
+              <h{{ module.card.heading_type }} class="cstmban_title">{{ module.card.heading }}</h{{ module.card.heading_type }}>
+            </div>
+            {% endif %}
+            <div class="cstmban_content">{{ module.card.content }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+{% require_css %}
+<style>
+  .{{ name }} {
+    background-color: rgba({{ module.style.background_color.color|convert_rgb  }},{{ module.style.background_color.opacity/100 }});
+    {{ module.style.desktop_spacing.css }}
+  }
+  .{{ name }} .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .{{ name }} .cstmban_card {
+    color: rgba({{ module.style.card.content_color.color|convert_rgb }}, {{ module.style.card.content_color.opacity * .01 }});
+    border-radius: {{ module.style.card.corner_radius }}px;
+    background-image: url({{ module.style.card.background_image.src }});
+    background-color: rgba({{ module.style.card.background_color.color|convert_rgb }}, {{ module.style.card.background_color.opacity * .01 }});
+  }
+  .{{ name }} .cstmban_card .cstmban_title {
+    color: rgba({{ module.style.card.heading_color.color|convert_rgb }}, {{ module.style.card.heading_color.opacity * .01 }});
+  }
+
+
+  @media (max-width: 767px) {
+    .{{ name }} {
+      {{ module.style.mobile_spacing.css }}
+    }
+
+  }
+</style>
+{% end_require_css %}

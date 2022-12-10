@@ -1,0 +1,91 @@
+<div class="footer_main">
+  <div class="content-wrapper">
+    <div class="footer_inner">
+      <div class="footer_max">
+        {% if module.footer_logo.src || module.caption %}
+        <div class="ft_logo_wrap">
+          {% if module.footer_logo.src %}
+          <div class="ft_logo">
+            {% set loadingAttr = module.footer_logo.loading != 'disabled' ? '{{ module.footer_logo.loading }}' : '' %}
+            {% logo
+              override_inherited_src="{{ module.footer_logo.override_inherited_src }}"
+              src="{{ module.footer_logo.src }}"
+              alt="{{ module.footer_logo.alt }}"
+              width="{{ module.footer_logo.width }}"
+              height="{{ module.footer_logo.height }}"
+              loading="{{ loadingAttr }}"
+              suppress_company_name="{{ module.footer_logo.suppress_company_name }}"
+            %}
+          </div>
+          {% endif %}
+          {% if module.caption %}
+          <div class="ft_caption">
+            <p>{{ module.caption }}</p>
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+        {% if module.footer_menu.title || module.footer_menu.simple_menu %}
+        <div class="ft_menu_wrap">
+          {% if module.footer_menu.title %}
+          <div class="ft_title">
+            {{ module.footer_menu.title }}
+          </div>
+          {% endif %}
+          {% if module.footer_menu.simple_menu %}
+          <div class="ft_menu">
+            {% simple_menu menu_tree="{{ module.footer_menu.simple_menu }}" %}
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+        {% if module.blog.title || module.blog.simple_menu %}
+        <div class="ft_blog_wrap">
+          {% if module.blog.title %}
+          <div class="ft_title">
+            {{ module.blog.title }}
+          </div>
+          {% endif %}
+          {% if module.blog.simple_menu %}
+          <div class="ft_menu">
+            {% simple_menu menu_tree="{{ module.blog.simple_menu }}" %}
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+        {% if module.social_icons.title || module.social_icons.social is iterable %}
+        <div class="ft_social_wrap">
+          {% if module.social_icons.title %}
+          <div class="ft_title">
+            {{ module.social_icons.title }}
+          </div>
+          {% endif %}
+          {% if module.social_icons.social is iterable %}
+          <div class="ft_social">
+            {% for item in module.social_icons.social %}
+            <div class="ft_social_item">
+              {% set href = item.link_field.url.href %}
+              {% if item.link_field.url.type is equalto "EMAIL_ADDRESS" %}
+              {% set href = "mailto:" + href %}
+              {% endif %}
+              <a href="{{ href }}" {% if item.link_field.open_in_new_tab %}target="_blank"{% endif %} {% if item.link_field.rel %}rel="{{ item.link_field.rel }}"{% endif %}>
+                <div class="icon">
+                  {% icon name="{{ item.icon.name }}" style="{{ item.icon.type }}" unicode="{{ item.icon.unicode }}" icon_set="{{ item.icon.icon_set }}" %}
+                </div>
+                <div class="text">
+                  {{ item.text }}
+                </div>
+              </a>
+            </div>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+        {% endif %}
+      </div>
+      <div class="footer_max ft_copyright">
+        {{ module.copyright_content }}
+      </div>
+    </div>
+  </div>
+</div>
